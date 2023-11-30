@@ -98,8 +98,8 @@ public class ControladorHistorial_Venta implements ActionListener,MouseListener 
                     boolean resultado=buscarPDF(nombre);
                     if (resultado==true) {
                          try{
-                             String carpetaPath = "C:/Users/Diego/Documents/I. Sistemas/6° CICLO/Integrador 1/2° PROYECTO/ComicCrown/ProyectoIntegrador2"
-                                    + "/src/main/java/facturaspdf/"+nombre;
+                             String ruta = System.getProperty("user.dir");
+                             String carpetaPath = ruta+"/src/main/java/facturaspdf/"+nombre;
                             Desktop desktop = Desktop.getDesktop();
                             desktop.open(new File(carpetaPath));
                          }catch(Exception ex){
@@ -136,7 +136,8 @@ public class ControladorHistorial_Venta implements ActionListener,MouseListener 
     }
     
     boolean buscarPDF(String nombre){
-        String carpetaPath = "C:/Users/Diego/Documents/I. Sistemas/6° CICLO/Integrador 1/2° PROYECTO/ComicCrown/ProyectoIntegrador2/src/main/java/facturaspdf";
+        String ruta = System.getProperty("user.dir");
+        String carpetaPath = ruta+"/src/main/java/facturaspdf";
         File carpeta=new File(carpetaPath);
         File archivos[]=carpeta.listFiles();
         for (File archivoactual : archivos) {

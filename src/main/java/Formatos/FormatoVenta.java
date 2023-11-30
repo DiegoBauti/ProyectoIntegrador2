@@ -65,8 +65,8 @@ public class FormatoVenta {
     public static void generarPdf(int cod,MysqlVentasDAO mv) {
         Document doc = new Document();
         try {
-            String ruta = System.getProperty("user.home");
-            PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/Documents/I. Sistemas/6° CICLO/Integrador 1/2° PROYECTO/ComicCrown/ProyectoIntegrador2/src/main/java/facturaspdf/factura" + cod + ".pdf"));
+            String ruta = System.getProperty("user.dir");
+            PdfWriter.getInstance(doc, new FileOutputStream(ruta + "/src/main/java/facturaspdf/factura" + cod + ".pdf"));
             doc.open();
             PdfPTable tabla = new PdfPTable(3);
             tabla.addCell("Nombre del Comic");
