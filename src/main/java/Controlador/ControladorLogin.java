@@ -2,6 +2,7 @@ package Controlador;
 
 import Vista.*;
 import DAO.*;
+import Formatos.encriptación;
 import Modelo.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -34,7 +35,8 @@ public class ControladorLogin implements MouseListener {
             String pass=vista.txtPass.getText();
             Cuenta cuen=new Cuenta();
             cuen.setCuenta(user);
-            cuen.setPassword(pass);
+            encriptación en=new encriptación();
+            cuen.setPassword(en.Encriptar(pass));
             boolean resultado=dl.verificarCuenta(cuen);
             if (user.isEmpty()||pass.isEmpty()) {
                 vista.lblError.setText("Rellene los campos faltantes!!");

@@ -21,7 +21,6 @@ public class vistaLogin extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         txtUser = new javax.swing.JTextField();
-        txtPass = new javax.swing.JTextField();
         btnIngresar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
@@ -34,6 +33,7 @@ public class vistaLogin extends javax.swing.JFrame {
         btnMin = new javax.swing.JLabel();
         btnCerr = new javax.swing.JLabel();
         lblError = new javax.swing.JLabel();
+        txtPass = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -71,12 +71,6 @@ public class vistaLogin extends javax.swing.JFrame {
         txtUser.setForeground(new java.awt.Color(255, 255, 255));
         txtUser.setBorder(null);
         redondear1.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 240, 40));
-
-        txtPass.setBackground(new java.awt.Color(52, 73, 102));
-        txtPass.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        txtPass.setForeground(new java.awt.Color(255, 255, 255));
-        txtPass.setBorder(null);
-        redondear1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 240, 40));
 
         btnIngresar.setBackground(new java.awt.Color(240, 244, 239));
         btnIngresar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
@@ -117,6 +111,12 @@ public class vistaLogin extends javax.swing.JFrame {
         lblError.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         lblError.setForeground(new java.awt.Color(204, 0, 0));
         redondear1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 280, 30));
+
+        txtPass.setBackground(new java.awt.Color(52, 73, 102));
+        txtPass.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        txtPass.setForeground(new java.awt.Color(255, 255, 255));
+        txtPass.setBorder(null);
+        redondear1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 240, 40));
 
         getContentPane().add(redondear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 0, 800, 580));
 
@@ -177,7 +177,7 @@ public class vistaLogin extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator2;
     public javax.swing.JLabel lblError;
     private Modelo.Redondear redondear1;
-    public javax.swing.JTextField txtPass;
+    public javax.swing.JPasswordField txtPass;
     public javax.swing.JTextField txtUser;
     // End of variables declaration//GEN-END:variables
 }
