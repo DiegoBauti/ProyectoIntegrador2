@@ -40,6 +40,8 @@ public class vistaHerramienta extends javax.swing.JFrame {
         btnVentas = new javax.swing.JButton();
         btnInventario = new javax.swing.JButton();
         bntHistorial = new javax.swing.JButton();
+        btnEditoriales = new javax.swing.JButton();
+        btnTrabajadores = new javax.swing.JButton();
         lblMinimizar = new javax.swing.JLabel();
         lblCerrar = new javax.swing.JLabel();
 
@@ -96,7 +98,34 @@ public class vistaHerramienta extends javax.swing.JFrame {
         bntHistorial.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
         bntHistorial.setText("Historial");
         bntHistorial.setBorder(null);
-        redondear2.add(bntHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 270, 70));
+        bntHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                bntHistorialActionPerformed(evt);
+            }
+        });
+        redondear2.add(bntHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 270, 70));
+
+        btnEditoriales.setBackground(new java.awt.Color(191, 204, 148));
+        btnEditoriales.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        btnEditoriales.setText("Editoriales");
+        btnEditoriales.setBorder(null);
+        btnEditoriales.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEditorialesActionPerformed(evt);
+            }
+        });
+        redondear2.add(btnEditoriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 270, 70));
+
+        btnTrabajadores.setBackground(new java.awt.Color(191, 204, 148));
+        btnTrabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        btnTrabajadores.setText("Trabajadores");
+        btnTrabajadores.setBorder(null);
+        btnTrabajadores.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTrabajadoresActionPerformed(evt);
+            }
+        });
+        redondear2.add(btnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 270, 70));
 
         redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 650));
 
@@ -121,6 +150,18 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void bntHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntHistorialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_bntHistorialActionPerformed
+
+    private void btnEditorialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditorialesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnEditorialesActionPerformed
+
+    private void btnTrabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabajadoresActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnTrabajadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,6 +189,7 @@ public class vistaHerramienta extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(vistaHerramienta.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -159,7 +201,9 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton bntHistorial;
+    public javax.swing.JButton btnEditoriales;
     public javax.swing.JButton btnInventario;
+    public javax.swing.JButton btnTrabajadores;
     public javax.swing.JButton btnVentas;
     private javax.swing.JLabel jLabel1;
     public javax.swing.JDesktopPane jdpEscritorio;

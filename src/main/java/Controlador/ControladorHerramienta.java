@@ -15,6 +15,8 @@ public class ControladorHerramienta implements MouseListener{
         vista.btnVentas.addMouseListener(this);
         vista.bntHistorial.addMouseListener(this);
         vista.btnInventario.addMouseListener(this);
+        vista.btnEditoriales.addMouseListener(this);
+        vista.btnTrabajadores.addMouseListener(this);
         view.setLocationRelativeTo(null);
         EliminarResaltado(view);
         view.setVisible(true);
@@ -41,6 +43,17 @@ public class ControladorHerramienta implements MouseListener{
             vistaHistorial_Venta vh=new vistaHistorial_Venta();
             ControladorHistorial_Venta ch=new ControladorHistorial_Venta(vh);
             MostrarInternal(vh);
+        }
+        if (e.getSource()==vista.btnTrabajadores) {
+            vistaTrabajadores vt=new vistaTrabajadores();
+            ControladorTrabajadores ct=new ControladorTrabajadores(vt);
+            MostrarInternal(vt);
+            
+        }
+        if (e.getSource()==vista.btnEditoriales) {
+            vistaEditoriales ve=new vistaEditoriales();
+            ControladorEditoriales ce=new ControladorEditoriales(ve);
+            MostrarInternal(ve);
         }
     }
 
