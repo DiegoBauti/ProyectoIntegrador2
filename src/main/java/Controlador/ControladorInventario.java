@@ -11,8 +11,10 @@ import javax.swing.JTable;
 
 public class ControladorInventario implements ActionListener {
     vistaInventario vista;
+    DefaultTableModel modelo;
     static DAOinventario daoinv =  new DAOinventario();
     static List<Comic>  listcmc =  daoinv.ListarComic();
+    
     public ControladorInventario(vistaInventario vist){
         this.vista=vist;
         vista.btnAgregar.addActionListener(this);
@@ -67,7 +69,7 @@ public class ControladorInventario implements ActionListener {
         DAOinventario daoinv =  new DAOinventario();
         List<Comic>  listcmc =  daoinv.ListarComic();
         String titulos[]={"ID","EDITORIAL","SERIE","UBICACION","RESTRICCION","FORMATO","NUMERO","STOCK","PRECIO"};
-        DefaultTableModel modelo = new DefaultTableModel(null,titulos);
+        modelo = new DefaultTableModel(null,titulos);
         tabla.setModel(modelo);
         for(int i=0; i<listcmc.size();i++){
             modelo.addRow(listcmc.get(i).ListaInventario());
@@ -79,6 +81,13 @@ public class ControladorInventario implements ActionListener {
         if(e.getSource()==vista.btnAgregar) {
             Comic cmc = CapturarDatos(vista);
             daoinv.Crear(cmc);
+            LimpiarEntradas(vista);
+            MostrarTabla(vista.tblInventario);
+        }
+        if(e.getSource()==vista.btnEliminar) {
+            int fila= vista.tblInventario.getSelectedRow();
+            int idcmc = (int) modelo.getValueAt(fila, 0);
+            daoinv.Eliminar(idcmc);
             LimpiarEntradas(vista);
             MostrarTabla(vista.tblInventario);
         }
