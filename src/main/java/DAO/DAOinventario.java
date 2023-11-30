@@ -21,7 +21,7 @@ public class DAOinventario implements InterfazInventario {
     @Override
     public List ListarComic() {
         ArrayList<Comic> listacmc = new ArrayList();
-        String consulta = "SELECT c.comic_id, e.nombre, c.titulo, c.ubicacion_estante, c.clasificacion, c.formato, c.num_pagina, c.ejemplares, c.costo FROM comics c INNER JOIN editoriales e ON c.editorial_id = e.editorial_id";
+        String consulta = "SELECT c.comic_id, e.nombre, c.titulo, c.ubicacion_estante, c.clasificacion, c.formato, c.num_pagina, c.ejemplares, c.costo FROM comics c INNER JOIN editoriales e ON c.editorial_id = e.editorial_id WHERE ind='V'";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
@@ -79,7 +79,16 @@ public class DAOinventario implements InterfazInventario {
 
     @Override
     public boolean Eliminar(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        String consulta="update comics set ind='N' where comic_id=?;";
+        try{
+            cnt =  conexion.getConnection();
+            pstt = cnt.prepareStatement(consulta);
+            pstt.setInt(1, id);
+            pstt.executeUpdate();
+        }catch(Exception ex){
+          JOptionPane.showMessageDialog(null, "No se pudo eliminar los datos del cliente \n"+ex); 
+        }  
+        return false;
     }
     
 }
