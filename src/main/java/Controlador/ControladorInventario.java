@@ -91,5 +91,9 @@ public class ControladorInventario implements ActionListener {
             LimpiarEntradas(vista);
             MostrarTabla(vista.tblInventario);
         }
+        if (e.getSource()==vista.btnActualizar) {
+            int fila= vista.tblInventario.getSelectedRow();
+            
+        }
     }
 }

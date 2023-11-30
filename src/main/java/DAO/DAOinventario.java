@@ -47,7 +47,33 @@ public class DAOinventario implements InterfazInventario {
 
     @Override
     public Comic Obtener(int id) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Connection cn=null;
+        PreparedStatement ps=null;
+        ResultSet rs=null;
+        try {
+            cn=new ConectarBD().getConectar();
+            String consulta="SELECT * FROM comiccrown.comics where comic_id=?;";
+            ps=cn.prepareStatement(consulta);
+            ps.setInt(1, id);
+            rs=ps.executeQuery();
+            while (rs.next()) {
+                Comic cm=new Comic();
+                cm.setComic_id(rs.getInt(consulta));
+                return cm;
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            return null;
+        }finally{
+            try{
+                if(cn!=null){cn.close();}
+                if(rs!=null){rs.close();}
+                if(ps!=null){ps.close();}
+                documento.close();
+            }catch(Exception ex){
+                ex.printStackTrace();
+            }
+        }
     }
 
     @Override
@@ -74,7 +100,7 @@ public class DAOinventario implements InterfazInventario {
 
     @Override
     public boolean Actualizar(Comic cmc) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        
     }
 
     @Override

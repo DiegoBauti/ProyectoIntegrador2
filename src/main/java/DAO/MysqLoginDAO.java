@@ -5,9 +5,9 @@ import Modelo.*;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
-public class DAOlogin extends ConectarBD implements LoginDAO {
+public class MysqLoginDAO extends ConectarBD implements LoginDAO {
 
-    public DAOlogin() {
+    public MysqLoginDAO() {
     }
 
     /*

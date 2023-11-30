@@ -10,10 +10,10 @@ import javax.swing.JOptionPane;
 
 public class ControladorLogin implements MouseListener {
     vistaLogin vista;
-    DAOlogin dl;
+    MysqLoginDAO dl;
     public ControladorLogin(vistaLogin view){
         this.vista=view;
-        dl=new DAOlogin();
+        dl=new MysqLoginDAO();
         vista.btnIngresar.addMouseListener(this);
         vista.btnCerr.addMouseListener(this);
         vista.btnMin.addMouseListener(this);
