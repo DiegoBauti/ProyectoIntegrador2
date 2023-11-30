@@ -86,10 +86,12 @@ public class ControladorInventario implements ActionListener {
         }
         if(e.getSource()==vista.btnEliminar) {
             int fila= vista.tblInventario.getSelectedRow();
-            int idcmc = (int) modelo.getValueAt(fila, 0);
-            daoinv.Eliminar(idcmc);
-            LimpiarEntradas(vista);
-            MostrarTabla(vista.tblInventario);
+            if(fila!=-1) {
+                int idcmc = (int) modelo.getValueAt(fila, 0);
+                daoinv.Eliminar(idcmc);
+                LimpiarEntradas(vista);
+                MostrarTabla(vista.tblInventario);
+            }
         }
         if (e.getSource()==vista.btnActualizar) {
             int fila= vista.tblInventario.getSelectedRow();
