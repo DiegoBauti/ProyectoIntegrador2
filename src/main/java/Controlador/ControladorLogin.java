@@ -10,8 +10,10 @@ import javax.swing.JOptionPane;
 
 public class ControladorLogin implements MouseListener {
     vistaLogin vista;
+    DAOlogin dl;
     public ControladorLogin(vistaLogin view){
         this.vista=view;
+        dl=new DAOlogin();
         vista.btnIngresar.addMouseListener(this);
         vista.btnCerr.addMouseListener(this);
         vista.btnMin.addMouseListener(this);
@@ -28,18 +30,23 @@ public class ControladorLogin implements MouseListener {
             vista.setExtendedState(JFrame.ICONIFIED);
         }
         if (e.getSource()==vista.btnIngresar) {
-            DAOlogin dalog;
-            Cuenta cuent = new Cuenta();
-            cuent.setCuenta(vista.txtUser.getText());
-            cuent.setPassword(vista.txtPass.getText());
-            dalog = new DAOlogin();
-            Cuenta cuentas = dalog.verificarCuentas(cuent);
-            if(cuentas!=null) {
+            String user=vista.txtUser.getText();
+            String pass=vista.txtPass.getText();
+            Cuenta cuen=new Cuenta();
+            cuen.setCuenta(user);
+            cuen.setPassword(pass);
+            boolean resultado=dl.verificarCuenta(cuen);
+            if (user.isEmpty()||pass.isEmpty()) {
+                vista.lblError.setText("Rellene los campos faltantes!!");
+            }else if(resultado==true){
+                vista.lblError.setText("");
+                JOptionPane.showMessageDialog(null, "Bienvenido al sistema", 
+                        "Inicio exitoso", JOptionPane.WARNING_MESSAGE);
                 vistaHerramienta vb=new vistaHerramienta();
                 ControladorHerramienta ch=new ControladorHerramienta(vb);
                 vista.dispose();
-            } else {
-                JOptionPane.showMessageDialog(null, "El nombre de usuario o la contraseña es incorrecta");
+            }else if(resultado==false){
+                vista.lblError.setText("Los datos no coinciden");
             }
         }
     }
