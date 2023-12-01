@@ -36,8 +36,8 @@ public class ControladorLogin implements MouseListener {
             String pass=vista.txtPass.getText();
             Cuenta cuen=new Cuenta();
             cuen.setCuenta(user);
-            encriptación en=new encriptación();
-            cuen.setPassword(en.Encriptar(pass));
+            //encriptación en=new encriptación();
+            cuen.setPassword(pass);
             boolean resultado=dl.verificarCuenta(cuen);
             if (user.isEmpty()||pass.isEmpty()) {
                 vista.lblError.setText("Rellene los campos faltantes!!");
