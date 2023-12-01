@@ -90,12 +90,12 @@ public class FormatoVenta {
             doc.add(imagen);
             // Agregar un título al documento
             Paragraph titulo = new Paragraph("Empresa : Comic Crown");
-            titulo.setAlignment(Element.ALIGN_CENTER);
+            titulo.setAlignment(Element.ALIGN_RIGHT);
             titulo.setFont(FontFactory.getFont(FontFactory.HELVETICA, 5));
             doc.add(titulo);
 
             Paragraph fecha = new Paragraph("Fecha y Hora de Impresión: " + obtenerFechaHoraActual());
-            fecha.setAlignment(Element.ALIGN_RIGHT);
+            fecha.setAlignment(Element.ALIGN_LEFT);
             fecha.setFont(FontFactory.getFont(FontFactory.HELVETICA, 5));
             doc.add(fecha);
             doc.add(Chunk.NEWLINE);

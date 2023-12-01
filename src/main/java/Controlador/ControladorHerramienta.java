@@ -100,6 +100,9 @@ public class ControladorHerramienta implements MouseListener{
     //Metodo que elimina el resaltado del Boton
     void EliminarResaltado(JFrame frame) {
         vista.btnVentas.setFocusPainted(false);
+        vista.btnEditoriales.setFocusPainted(false);
+        vista.btnTrabajadores.setFocusPainted(false);
+        vista.btnInventario.setFocusPainted(false);
         vista.bntHistorial.setFocusPainted(false);
         //vista.btnResumen.setFocusCycleRoot(false);
     }

@@ -6,14 +6,11 @@ import Modelo.*;
 import Vista.vistaVenta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import javax.swing.table.*;
-import com.itextpdf.text.Document;
-import com.itextpdf.text.pdf.PdfWriter;
-import com.itextpdf.text.pdf.PdfPTable;
-import java.io.FileOutputStream;
 import javax.swing.SwingUtilities;
 
 public class ControladorVentas implements DocumentListener, ActionListener {
@@ -36,6 +33,7 @@ public class ControladorVentas implements DocumentListener, ActionListener {
         vista.btnActualizar.addActionListener(this);
         vista.btnVender.addActionListener(this);
         vista.txfNombreBuscar.getDocument().addDocumentListener(this);
+        EliminarResaltado(vista);
     }
     
     @Override
@@ -239,5 +237,15 @@ public class ControladorVentas implements DocumentListener, ActionListener {
         }
         return false; 
     } 
+    //Metodo que elimina el resaltado del Boton
+    void EliminarResaltado(JInternalFrame iframe) {
+        vista.btnActualizar.setFocusPainted(false);
+        vista.btnAgregar.setFocusPainted(false);
+        vista.btnEditar.setFocusPainted(false);
+        vista.btnEliminar.setFocusPainted(false);
+        vista.btnVaciar.setFocusPainted(false);
+        vista.btnVender.setFocusPainted(false);
+        //vista.btnResumen.setFocusCycleRoot(false);
+    }
     
 }

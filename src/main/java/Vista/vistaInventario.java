@@ -49,6 +49,7 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         jButton5 = new javax.swing.JButton();
         txtPre = new javax.swing.JTextField();
 
+        setBorder(null);
         setClosable(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

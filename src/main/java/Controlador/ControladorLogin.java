@@ -18,6 +18,7 @@ public class ControladorLogin implements MouseListener {
         vista.btnIngresar.addMouseListener(this);
         vista.btnCerr.addMouseListener(this);
         vista.btnMin.addMouseListener(this);
+        vista.btnIngresar.setFocusPainted(false);
         view.setLocationRelativeTo(null);
         view.setVisible(true);
     }
