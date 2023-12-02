@@ -33,7 +33,8 @@ public class MysqLoginDAO extends ConectarBD implements LoginDAO {
     }*/
 
     @Override
-    public boolean verificarCuenta(Cuenta cuen) {
+    public Trabajadores verificarCuenta(String user, String pass) {
+        Trabajadores tra=null;
         Connection cn = null;
         Statement st = null;
         PreparedStatement ps = null;
@@ -41,12 +42,20 @@ public class MysqLoginDAO extends ConectarBD implements LoginDAO {
         try {
             cn = new ConectarBD().getConectar();
             st = cn.createStatement();
-            String consulta = "select * from trabajadores where username=? and password=?";
+            String consulta = "select nombre,apellido,dni,fotografia from trabajadores where username=? and password=?";
             ps = cn.prepareStatement(consulta);
-            ps.setString(1, cuen.getCuenta());
-            ps.setString(2, cuen.getPassword());
+            ps.setString(1, user);
+            ps.setString(2, pass);
             rs = ps.executeQuery();
-            return rs.next();
+            if (rs.next()) {
+                tra=new Trabajadores();
+                tra.setNombre(rs.getString(1));
+                tra.setApellido(rs.getString(2));
+                tra.setDni(rs.getInt(3));
+                tra.setFotografia(rs.getString(4));
+                return tra;
+            }
+            
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -64,6 +73,6 @@ public class MysqLoginDAO extends ConectarBD implements LoginDAO {
                 e2.printStackTrace();
             }
         }
-     return false;
+     return null;
     }
 }

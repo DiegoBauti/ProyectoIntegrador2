@@ -6,6 +6,8 @@ import Modelo.*;
 import Vista.vistaVenta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.event.DocumentEvent;
@@ -215,7 +217,9 @@ public class ControladorVentas implements DocumentListener, ActionListener {
             Object cantidad = vista.tblListaVender.getValueAt(fila, 3);
             mult = (double) precio * (int) cantidad;
             suma = suma + mult;
-            vista.lblCostoTotal.setText("Costo Total: S/" + suma);            
+            BigDecimal bigDecimal = new BigDecimal(suma);
+            BigDecimal roundedNumber = bigDecimal.setScale(2, RoundingMode.HALF_UP);
+            vista.lblCostoTotal.setText("Costo Total: S/" + roundedNumber);            
         }
         return suma;
     }

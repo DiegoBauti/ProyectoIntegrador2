@@ -23,6 +23,8 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel2 = new javax.swing.JLabel();
         btnBuscar = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
@@ -55,52 +57,67 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         ));
         jScrollPane1.setViewportView(tblHistorial);
 
-        redondear1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 450, 390));
+        redondear1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 450, 400));
 
         cbxOrdenar.setBackground(new java.awt.Color(240, 244, 239));
         cbxOrdenar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         cbxOrdenar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Monto de Menor a Mayor", "Monto de Mayor a Menor", "Fecha de Menor a Mayor", "Fecha de Mayor a Menor" }));
         cbxOrdenar.setBorder(null);
-        redondear1.add(cbxOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 300, 170, 50));
+        redondear1.add(cbxOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 210, 50));
 
-        btnFiltrar.setBackground(new java.awt.Color(240, 244, 239));
-        btnFiltrar.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-        btnFiltrar.setText("FILTRAR");
-        redondear1.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 220, -1, -1));
+        btnFiltrar.setBackground(new java.awt.Color(51, 51, 51));
+        btnFiltrar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnFiltrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnFiltrar.setText("Filtrar");
+        redondear1.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, 100, 40));
 
         cbxFiltrar.setBackground(new java.awt.Color(240, 244, 239));
         cbxFiltrar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         cbxFiltrar.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Selecciona", "Mayor a 150", "De esta semana", "Menos a 100" }));
         cbxFiltrar.setBorder(null);
-        redondear1.add(cbxFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 210, 170, 50));
+        redondear1.add(cbxFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 130, 50));
 
-        btnOrdenar.setBackground(new java.awt.Color(240, 244, 239));
-        btnOrdenar.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-        btnOrdenar.setText("ORDENAR");
-        redondear1.add(btnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, -1, -1));
+        btnOrdenar.setBackground(new java.awt.Color(51, 51, 51));
+        btnOrdenar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnOrdenar.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrdenar.setText("Ordenar");
+        redondear1.add(btnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 120, 40));
 
-        btnMostrarTodo.setBackground(new java.awt.Color(240, 244, 239));
-        btnMostrarTodo.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-        btnMostrarTodo.setText("MOSTRAR");
-        redondear1.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 510, -1, -1));
+        btnMostrarTodo.setBackground(new java.awt.Color(153, 153, 0));
+        btnMostrarTodo.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnMostrarTodo.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarTodo.setText("Mostrar Todo");
+        redondear1.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 450, 40));
 
         txfIngresoID.setBackground(new java.awt.Color(180, 205, 237));
+        txfIngresoID.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         txfIngresoID.setBorder(null);
-        redondear1.add(txfIngresoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 80, 40));
+        redondear1.add(txfIngresoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 80, 30));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 80, 10));
+        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 80, 10));
 
         jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel2.setText("Ingresa el ID:");
-        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, -1, -1));
+        jLabel2.setText("Selecciona una opción");
+        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, -1));
 
-        btnBuscar.setBackground(new java.awt.Color(240, 244, 239));
-        btnBuscar.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
-        btnBuscar.setText("BUSCAR");
-        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 130, -1, -1));
+        btnBuscar.setBackground(new java.awt.Color(51, 51, 51));
+        btnBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
+        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 90, 40));
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Ingresar la ID Venta:");
+        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 100, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Selecciona una opción");
+        redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 190, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -126,6 +143,8 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
     public javax.swing.JComboBox<String> cbxOrdenar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private Modelo.Redondear redondear1;

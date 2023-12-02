@@ -50,6 +50,15 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         txtUsername_trabajadores = new javax.swing.JTextField();
         txtSueldo_trabajadores = new javax.swing.JTextField();
         txtId_trabajadores = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jSeparator9 = new javax.swing.JSeparator();
 
         setBorder(null);
         setClosable(true);
@@ -63,6 +72,7 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         redondear1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("TRABAJADORES");
         redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, -1, -1));
 
@@ -92,7 +102,7 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
                 btnEliminar_TraActionPerformed(evt);
             }
         });
-        redondear1.add(btnEliminar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 480, 160, 50));
+        redondear1.add(btnEliminar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 160, 50));
 
         btnActualizar_Tra.setBackground(new java.awt.Color(51, 153, 255));
         btnActualizar_Tra.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -103,7 +113,7 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
                 btnActualizar_TraActionPerformed(evt);
             }
         });
-        redondear1.add(btnActualizar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 480, 160, 50));
+        redondear1.add(btnActualizar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 470, 160, 50));
 
         btnAgregar_Tra.setBackground(new java.awt.Color(51, 204, 0));
         btnAgregar_Tra.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
@@ -114,52 +124,137 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
                 btnAgregar_TraActionPerformed(evt);
             }
         });
-        redondear1.add(btnAgregar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 480, 160, 50));
+        redondear1.add(btnAgregar_Tra, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 460, 160, 50));
 
+        jLabel2.setBackground(new java.awt.Color(180, 205, 237));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
-        jLabel2.setText("Agregar Trabajadores:");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 190, 20));
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Registro de Trabajador");
+        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 180, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel8.setText("Username:");
-        redondear1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, -1, -1));
-        redondear1.add(txtNombre_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 100, 20));
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel8.setText(" Username:");
+        redondear1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 370, 80, 30));
+
+        txtNombre_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtNombre_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtNombre_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtNombre_trabajadores.setBorder(null);
+        redondear1.add(txtNombre_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 170, 110, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 0, 0));
         jLabel9.setText("Apellidos:");
-        redondear1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 230, -1, -1));
+        redondear1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 210, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 0, 0));
         jLabel10.setText("Telefono:");
-        redondear1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, -1, -1));
+        redondear1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(0, 0, 0));
         jLabel11.setText("Email:");
-        redondear1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        redondear1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, -1, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
         jLabel12.setText("DNI:");
-        redondear1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 350, -1, -1));
+        redondear1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, 30));
 
         jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("ID:");
-        redondear1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
+        redondear1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
 
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Sueldo:");
-        redondear1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 440, -1, -1));
+        redondear1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, -1, 30));
 
         jLabel15.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
         jLabel15.setText("Nombres:");
-        redondear1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, -1));
-        redondear1.add(txtApellidos_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 230, 100, 20));
-        redondear1.add(txtTelefono_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 100, 20));
-        redondear1.add(txtEmail_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 310, 100, 20));
-        redondear1.add(txtDni_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 350, 100, 20));
-        redondear1.add(txtUsername_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 100, 20));
-        redondear1.add(txtSueldo_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 440, 100, 20));
-        redondear1.add(txtId_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 140, 100, 20));
+        redondear1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+
+        txtApellidos_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtApellidos_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtApellidos_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtApellidos_trabajadores.setBorder(null);
+        redondear1.add(txtApellidos_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 210, 110, 30));
+
+        txtTelefono_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtTelefono_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtTelefono_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtTelefono_trabajadores.setBorder(null);
+        redondear1.add(txtTelefono_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 250, 110, 30));
+
+        txtEmail_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtEmail_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtEmail_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtEmail_trabajadores.setBorder(null);
+        redondear1.add(txtEmail_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 290, 110, 30));
+
+        txtDni_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtDni_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtDni_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtDni_trabajadores.setBorder(null);
+        redondear1.add(txtDni_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 330, 110, 30));
+
+        txtUsername_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtUsername_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtUsername_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtUsername_trabajadores.setBorder(null);
+        redondear1.add(txtUsername_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 110, 30));
+
+        txtSueldo_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtSueldo_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtSueldo_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtSueldo_trabajadores.setBorder(null);
+        redondear1.add(txtSueldo_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 110, 30));
+
+        txtId_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
+        txtId_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtId_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        txtId_trabajadores.setBorder(null);
+        redondear1.add(txtId_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 110, 30));
+
+        jSeparator1.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 110, 20));
+
+        jSeparator2.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 440, 110, 20));
+
+        jSeparator3.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 320, 110, 20));
+
+        jSeparator4.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 360, 110, 20));
+
+        jSeparator5.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 240, 110, 20));
+
+        jSeparator6.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 110, 20));
+
+        jSeparator7.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 110, 20));
+
+        jSeparator8.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 110, 20));
+
+        jSeparator9.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 180, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -203,6 +298,15 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private Modelo.Redondear redondear1;
     public javax.swing.JTable tblTrabajadores;
     public javax.swing.JTextField txtApellidos_trabajadores;

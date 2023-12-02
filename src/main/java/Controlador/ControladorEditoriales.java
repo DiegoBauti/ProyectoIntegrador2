@@ -8,6 +8,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 
 
@@ -21,6 +22,7 @@ public class ControladorEditoriales implements ActionListener{
         vista.btnAgregar_Edit.addActionListener(this);
         vista.btnEliminar_Edit.addActionListener(this);
         vista.btnActualizar_Edit.addActionListener(this);
+        EliminarResaltado(vista);
         MostrarTabla(vista.tblEditoriales);
     }
     public void MostrarTabla(JTable tabla) {
@@ -36,8 +38,13 @@ public class ControladorEditoriales implements ActionListener{
     
     @Override
     public void actionPerformed(ActionEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }   
+    }
+    //Metodo que elimina el resaltado del Boton
+    void EliminarResaltado(JInternalFrame iframe) {
+        vista.btnActualizar_Edit.setFocusPainted(false);
+        vista.btnAgregar_Edit.setFocusPainted(false);
+        vista.btnEliminar_Edit.setFocusPainted(false);
+    }
     
     
     

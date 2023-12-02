@@ -44,9 +44,12 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         btnEditar = new javax.swing.JButton();
         spnCantidad2 = new javax.swing.JSpinner();
         btnActualizar = new javax.swing.JButton();
-        btnAgregar = new javax.swing.JButton();
         spnCantidad = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        btnAgregar = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
@@ -61,8 +64,9 @@ public class vistaVenta extends javax.swing.JInternalFrame {
 
         jLabel1.setBackground(new java.awt.Color(51, 51, 51));
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Ventas");
-        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, -1, -1));
+        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
 
         tblComic_venta.setBackground(new java.awt.Color(240, 244, 239));
         tblComic_venta.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
@@ -81,7 +85,11 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblComic_venta);
 
         redondear1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 370, 380));
-        redondear1.add(txfNombreBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 200, 30));
+
+        txfNombreBuscar.setBackground(new java.awt.Color(180, 205, 237));
+        txfNombreBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
+        txfNombreBuscar.setBorder(null);
+        redondear1.add(txfNombreBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 140, 30));
         redondear1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
         redondear2.setRoundBottomLeft(60);
@@ -90,16 +98,22 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         redondear2.setRoundTopRight(60);
         redondear2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Comics Seleccionados");
         redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
 
+        lblCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblCantidad.setForeground(new java.awt.Color(0, 0, 0));
         lblCantidad.setText("Cantidad de Comic:");
         redondear2.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 240, -1));
 
+        lblCostoTotal.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblCostoTotal.setForeground(new java.awt.Color(0, 0, 0));
         lblCostoTotal.setText("Costo Total:");
         redondear2.add(lblCostoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 20));
 
+        tblListaVender.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         tblListaVender.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -135,6 +149,8 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
         btnEditar.setText("Editar");
         redondear2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 100, 30));
+
+        spnCantidad2.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         redondear2.add(spnCantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 100, 40));
 
         btnActualizar.setBackground(new java.awt.Color(51, 51, 51));
@@ -145,17 +161,29 @@ public class vistaVenta extends javax.swing.JInternalFrame {
 
         redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 460, 480));
 
+        spnCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
+        redondear1.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 140, 30));
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Ingrese una cantidad:");
+        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
+
+        jSeparator2.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 140, 10));
+
         btnAgregar.setBackground(new java.awt.Color(51, 51, 51));
         btnAgregar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
         btnAgregar.setText("Agregar");
-        redondear1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 80, 110, 30));
-        redondear1.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 110, 30));
+        redondear1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 110, 30));
 
-        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Ingrese el nombre del comic:");
-        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 70, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Nombre del Comic:");
+        redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -182,8 +210,11 @@ public class vistaVenta extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lblBuscar;
     public javax.swing.JLabel lblCantidad;
     public javax.swing.JLabel lblCostoTotal;

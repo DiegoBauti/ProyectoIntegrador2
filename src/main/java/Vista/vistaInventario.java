@@ -45,9 +45,10 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         btnAgregar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
+        btnBuscar = new javax.swing.JButton();
+        btnFiltrar = new javax.swing.JButton();
         txtPre = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setBorder(null);
         setClosable(true);
@@ -61,8 +62,9 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         redondear1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Control de Inventario");
-        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, -1, -1));
+        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
 
         btnCerr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar.png"))); // NOI18N
         redondear1.add(btnCerr, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
@@ -94,12 +96,12 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         cbxEdit.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         cbxEdit.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "MARVEL", "DC", "IDW" }));
         cbxEdit.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "EDITORIAL", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        redondear1.add(cbxEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 140, -1));
+        redondear1.add(cbxEdit, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 120, 140, 60));
 
         cbxRes.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         cbxRes.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "E", "T", "T+", "M" }));
         cbxRes.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "RESTRICCIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        redondear1.add(cbxRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 140, -1));
+        redondear1.add(cbxRes, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 140, 60));
 
         spnNum.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         spnNum.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "NÚMERO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
@@ -108,50 +110,65 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         cbxFor.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         cbxFor.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Tapa Dura", "Tapa Blanda" }));
         cbxFor.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "FORMATO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        redondear1.add(cbxFor, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, -1));
+        redondear1.add(cbxFor, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, -1, 60));
 
         spnSto.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         spnSto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "STOCK", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
-        redondear1.add(spnSto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 120, -1));
+        redondear1.add(spnSto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 120, 60));
 
+        jTextField3.setBackground(new java.awt.Color(180, 205, 237));
         jTextField3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jTextField3.setBorder(null);
-        redondear1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 140, 30));
+        redondear1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 140, 30));
 
         jComboBox4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR" }));
         jComboBox4.setBorder(null);
-        redondear1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 140, 30));
+        redondear1.add(jComboBox4, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, 140, 30));
 
         txtUbi.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         txtUbi.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "UBICACIÓN", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         redondear1.add(txtUbi, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 190, 120, 60));
 
+        btnAgregar.setBackground(new java.awt.Color(51, 204, 0));
         btnAgregar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        btnAgregar.setText("AGREGAR");
-        redondear1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 120, -1, -1));
+        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
+        btnAgregar.setText("Agregar");
+        redondear1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 110, 120, 40));
 
+        btnActualizar.setBackground(new java.awt.Color(51, 153, 255));
         btnActualizar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        btnActualizar.setText("ACTUALIZAR");
-        redondear1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 170, -1, -1));
+        btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setText("Actualizar");
+        redondear1.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 120, 40));
 
+        btnEliminar.setBackground(new java.awt.Color(255, 0, 51));
         btnEliminar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        btnEliminar.setText("ELIMINAR");
-        redondear1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 220, -1, -1));
+        btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setText("Eliminar");
+        redondear1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 120, 40));
 
-        jButton4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        jButton4.setText("BUSCAR");
-        jButton4.setBorder(null);
-        redondear1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 280, -1, -1));
+        btnBuscar.setBackground(new java.awt.Color(51, 51, 51));
+        btnBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setText("Buscar");
+        btnBuscar.setBorder(null);
+        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 90, 30));
 
-        jButton5.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        jButton5.setText("FILTRAR");
-        jButton5.setBorder(null);
-        redondear1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, 20));
+        btnFiltrar.setBackground(new java.awt.Color(51, 51, 51));
+        btnFiltrar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        btnFiltrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnFiltrar.setText("Filtrar");
+        btnFiltrar.setBorder(null);
+        redondear1.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 270, 90, 30));
 
         txtPre.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         txtPre.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "PRECIO", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         redondear1.add(txtPre, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 120, 60));
+
+        jSeparator1.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 300, 140, 20));
 
         getContentPane().add(redondear1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 550));
 
@@ -162,17 +179,18 @@ public class vistaInventario extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnAgregar;
+    public javax.swing.JButton btnBuscar;
     public javax.swing.JLabel btnCerr;
     public javax.swing.JButton btnEliminar;
+    public javax.swing.JButton btnFiltrar;
     public javax.swing.JLabel btnMin;
     public javax.swing.JComboBox<String> cbxEdit;
     public javax.swing.JComboBox<String> cbxFor;
     public javax.swing.JComboBox<String> cbxRes;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField3;
     private Modelo.Redondear redondear1;
     public javax.swing.JSpinner spnNum;

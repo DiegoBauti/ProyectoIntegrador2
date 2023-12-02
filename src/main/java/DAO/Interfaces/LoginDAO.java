@@ -1,7 +1,7 @@
 package DAO.Interfaces;
 
-import Modelo.Cuenta;
+import Modelo.Trabajadores;
 
 public interface LoginDAO {
-    boolean verificarCuenta(Cuenta cuen);
+    Trabajadores verificarCuenta(String user, String pass);
 }

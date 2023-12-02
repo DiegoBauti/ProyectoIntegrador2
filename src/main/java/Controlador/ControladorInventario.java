@@ -7,6 +7,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 
 public class ControladorInventario implements ActionListener {
@@ -20,6 +21,7 @@ public class ControladorInventario implements ActionListener {
         vista.btnAgregar.addActionListener(this);
         vista.btnEliminar.addActionListener(this);
         vista.btnActualizar.addActionListener(this);
+        EliminarResaltado(vista);
         MostrarTabla(vista.tblInventario);
     }
     
@@ -97,5 +99,13 @@ public class ControladorInventario implements ActionListener {
             int fila= vista.tblInventario.getSelectedRow();
             
         }
+    }
+    //Metodo que elimina el resaltado del Boton
+    void EliminarResaltado(JInternalFrame iframe) {
+        vista.btnActualizar.setFocusPainted(false);
+        vista.btnAgregar.setFocusPainted(false);
+        vista.btnEliminar.setFocusPainted(false);
+        vista.btnFiltrar.setFocusPainted(false);
+        vista.btnBuscar.setFocusPainted(false);
     }
 }

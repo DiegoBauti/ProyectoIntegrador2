@@ -2,7 +2,7 @@ package Controlador;
 
 import Vista.*;
 import DAO.*;
-import Formatos.encriptación;
+import Formatos.AES;
 import Modelo.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -34,22 +34,21 @@ public class ControladorLogin implements MouseListener {
         if (e.getSource()==vista.btnIngresar) {
             String user=vista.txtUser.getText();
             String pass=vista.txtPass.getText();
-            Cuenta cuen=new Cuenta();
-            cuen.setCuenta(user);
-            //encriptación en=new encriptación();
-            cuen.setPassword(pass);
-            boolean resultado=dl.verificarCuenta(cuen);
+          
+            Trabajadores tra=dl.verificarCuenta(user, pass);
             if (user.isEmpty()||pass.isEmpty()) {
                 vista.lblError.setText("Rellene los campos faltantes!!");
-            }else if(resultado==true){
+            }else if(tra==null){
+                vista.lblError.setText("Credenciales Inválidas");
+            }else{
                 vista.lblError.setText("");
                 JOptionPane.showMessageDialog(null, "Bienvenido al sistema", 
-                        "Inicio exitoso", JOptionPane.WARNING_MESSAGE);
+                        "Inicio exitoso", JOptionPane.INFORMATION_MESSAGE);
                 vistaHerramienta vb=new vistaHerramienta();
-                ControladorHerramienta ch=new ControladorHerramienta(vb);
+                ControladorHerramienta ch=new ControladorHerramienta(vb,tra);
+                 vista.txtUser.setText("");
+                 vista.txtPass.setText("");
                 vista.dispose();
-            }else if(resultado==false){
-                vista.lblError.setText("Los datos no coinciden");
             }
         }
     }

@@ -72,9 +72,11 @@ public class vistaLogin extends javax.swing.JFrame {
         txtUser.setBorder(null);
         redondear1.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 240, 40));
 
-        btnIngresar.setBackground(new java.awt.Color(240, 244, 239));
+        btnIngresar.setBackground(new java.awt.Color(81, 136, 162));
         btnIngresar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
+        btnIngresar.setBorder(null);
         redondear1.add(btnIngresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 510, 140, 40));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/OIP-removebg-preview.png"))); // NOI18N
@@ -92,15 +94,15 @@ public class vistaLogin extends javax.swing.JFrame {
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/usuarios.png"))); // NOI18N
         redondear1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, -1));
 
-        jLabel10.setFont(new java.awt.Font("Nirmala UI", 0, 48)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Comic Crown");
-        redondear1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, 290, 66));
+        redondear1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 70, 310, 66));
 
-        jLabel11.setFont(new java.awt.Font("Nirmala UI", 0, 48)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Iniciar Sesión");
-        redondear1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 20, 290, 66));
+        redondear1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, 310, 66));
 
         btnMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/minimizar.png"))); // NOI18N
         redondear1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, -1, -1));

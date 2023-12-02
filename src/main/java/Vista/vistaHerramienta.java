@@ -42,8 +42,19 @@ public class vistaHerramienta extends javax.swing.JFrame {
         bntHistorial = new javax.swing.JButton();
         btnEditoriales = new javax.swing.JButton();
         btnTrabajadores = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        redondear3 = new Modelo.Redondear();
+        jLabel3 = new javax.swing.JLabel();
+        lblFoto = new javax.swing.JLabel();
+        lblNombres = new javax.swing.JLabel();
+        lblApellidos = new javax.swing.JLabel();
+        lblDNI = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
         lblMinimizar = new javax.swing.JLabel();
         lblCerrar = new javax.swing.JLabel();
+        btnCerrarSesion = new Modelo.Redondear();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -79,34 +90,43 @@ public class vistaHerramienta extends javax.swing.JFrame {
         redondear2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 0, 40)); // NOI18N
-        jLabel1.setText("Herramientas");
-        redondear2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 240, 35));
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("Panel De");
+        redondear2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 170, 35));
 
         btnVentas.setBackground(new java.awt.Color(191, 204, 148));
         btnVentas.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnVentas.setText("Ventas");
+        btnVentas.setForeground(new java.awt.Color(0, 0, 0));
+        btnVentas.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\carrito-de-compras (2).png")); // NOI18N
+        btnVentas.setText("      Ventas");
         btnVentas.setBorder(null);
-        redondear2.add(btnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 270, 70));
+        redondear2.add(btnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 270, 70));
 
         btnInventario.setBackground(new java.awt.Color(191, 204, 148));
         btnInventario.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnInventario.setText("Inventario");
+        btnInventario.setForeground(new java.awt.Color(0, 0, 0));
+        btnInventario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\alt-de-inventario.png")); // NOI18N
+        btnInventario.setText("  Inventario");
         btnInventario.setBorder(null);
-        redondear2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 270, 70));
+        redondear2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 70));
 
         bntHistorial.setBackground(new java.awt.Color(191, 204, 148));
         bntHistorial.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        bntHistorial.setText("Historial");
+        bntHistorial.setForeground(new java.awt.Color(0, 0, 0));
+        bntHistorial.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\lista.png")); // NOI18N
+        bntHistorial.setText("    Historial");
         bntHistorial.setBorder(null);
         bntHistorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 bntHistorialActionPerformed(evt);
             }
         });
-        redondear2.add(bntHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 270, 70));
+        redondear2.add(bntHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 270, 70));
 
         btnEditoriales.setBackground(new java.awt.Color(191, 204, 148));
         btnEditoriales.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        btnEditoriales.setForeground(new java.awt.Color(0, 0, 0));
+        btnEditoriales.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\editar.png")); // NOI18N
         btnEditoriales.setText("Editoriales");
         btnEditoriales.setBorder(null);
         btnEditoriales.addActionListener(new java.awt.event.ActionListener() {
@@ -114,18 +134,59 @@ public class vistaHerramienta extends javax.swing.JFrame {
                 btnEditorialesActionPerformed(evt);
             }
         });
-        redondear2.add(btnEditoriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 510, 270, 70));
+        redondear2.add(btnEditoriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 270, 70));
 
         btnTrabajadores.setBackground(new java.awt.Color(191, 204, 148));
         btnTrabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnTrabajadores.setText("Trabajadores");
+        btnTrabajadores.setForeground(new java.awt.Color(0, 0, 0));
+        btnTrabajadores.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\usuarios (1).png")); // NOI18N
+        btnTrabajadores.setText("  Trabajadores");
         btnTrabajadores.setBorder(null);
         btnTrabajadores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnTrabajadoresActionPerformed(evt);
             }
         });
-        redondear2.add(btnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 270, 70));
+        redondear2.add(btnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 270, 70));
+
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 40)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Herramientas");
+        redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 35));
+
+        redondear3.setBackground(new java.awt.Color(143, 153, 111));
+        redondear3.setRoundBottomLeft(60);
+        redondear3.setRoundBottomRight(60);
+        redondear3.setRoundTopLeft(60);
+        redondear3.setRoundTopRight(60);
+        redondear3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Bienvenido,");
+        redondear3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 6, 90, 30));
+        redondear3.add(lblFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 70, 60));
+
+        lblNombres.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblNombres.setForeground(new java.awt.Color(0, 0, 0));
+        lblNombres.setText("Diego");
+        redondear3.add(lblNombres, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 90, 20));
+
+        lblApellidos.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblApellidos.setForeground(new java.awt.Color(0, 0, 0));
+        lblApellidos.setText("Bautista");
+        redondear3.add(lblApellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 90, 20));
+
+        lblDNI.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblDNI.setForeground(new java.awt.Color(0, 0, 0));
+        lblDNI.setText("DNI:75792854");
+        redondear3.add(lblDNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 100, 20));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\informacion (1).png")); // NOI18N
+        jLabel5.setText("jLabel5");
+        redondear3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 37, -1));
+
+        redondear2.add(redondear3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 250, 110));
 
         redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 650));
 
@@ -134,6 +195,24 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
         lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar.png"))); // NOI18N
         redondear1.add(lblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 37, -1));
+
+        btnCerrarSesion.setBackground(new java.awt.Color(224, 79, 95));
+        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        btnCerrarSesion.setRoundBottomLeft(60);
+        btnCerrarSesion.setRoundBottomRight(60);
+        btnCerrarSesion.setRoundTopLeft(60);
+        btnCerrarSesion.setRoundTopRight(60);
+        btnCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Cerrar Sesión");
+        btnCerrarSesion.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
+
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\energia (2).png")); // NOI18N
+        btnCerrarSesion.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, 50));
+
+        redondear1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 140, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -201,15 +280,26 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton bntHistorial;
+    public Modelo.Redondear btnCerrarSesion;
     public javax.swing.JButton btnEditoriales;
     public javax.swing.JButton btnInventario;
     public javax.swing.JButton btnTrabajadores;
     public javax.swing.JButton btnVentas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     public javax.swing.JDesktopPane jdpEscritorio;
+    public javax.swing.JLabel lblApellidos;
     public javax.swing.JLabel lblCerrar;
+    public javax.swing.JLabel lblDNI;
+    public javax.swing.JLabel lblFoto;
     public javax.swing.JLabel lblMinimizar;
+    public javax.swing.JLabel lblNombres;
     private Modelo.Redondear redondear1;
     private Modelo.Redondear redondear2;
+    private Modelo.Redondear redondear3;
     // End of variables declaration//GEN-END:variables
 }

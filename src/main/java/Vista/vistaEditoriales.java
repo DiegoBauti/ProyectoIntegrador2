@@ -46,6 +46,15 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         txtTelefono_editorial = new javax.swing.JTextField();
         txtAño_editorial = new javax.swing.JTextField();
         txtId_editorial = new javax.swing.JTextField();
+        jSeparator1 = new javax.swing.JSeparator();
+        jSeparator2 = new javax.swing.JSeparator();
+        jSeparator3 = new javax.swing.JSeparator();
+        jSeparator4 = new javax.swing.JSeparator();
+        jSeparator5 = new javax.swing.JSeparator();
+        jSeparator6 = new javax.swing.JSeparator();
+        jSeparator7 = new javax.swing.JSeparator();
+        jSeparator8 = new javax.swing.JSeparator();
+        jSeparator9 = new javax.swing.JSeparator();
 
         setBorder(null);
         setClosable(true);
@@ -59,6 +68,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         redondear1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Editoriales");
         redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
@@ -80,7 +90,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         redondear1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 80, 620, 390));
 
         btnEliminar_Edit.setBackground(new java.awt.Color(255, 0, 51));
-        btnEliminar_Edit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnEliminar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
         btnEliminar_Edit.setText("ELIMINAR ");
         btnEliminar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnEliminar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -88,10 +98,10 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnEliminar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnEliminar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 480, 160, 50));
+        redondear1.add(btnEliminar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 160, 50));
 
         btnActualizar_Edit.setBackground(new java.awt.Color(51, 153, 255));
-        btnActualizar_Edit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnActualizar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
         btnActualizar_Edit.setText("ACTUALIZAR");
         btnActualizar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnActualizar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -99,10 +109,10 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnActualizar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 480, 160, 50));
+        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 160, 50));
 
         btnAgregar_Edit.setBackground(new java.awt.Color(51, 204, 0));
-        btnAgregar_Edit.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        btnAgregar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
         btnAgregar_Edit.setText("AGREGAR");
         btnAgregar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnAgregar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -110,42 +120,106 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnAgregar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnAgregar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 160, 50));
+        redondear1.add(btnAgregar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 160, 50));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 17)); // NOI18N
-        jLabel2.setText("Agregar Nueva Editorial:");
-        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, 210, 20));
-        redondear1.add(txtNombre_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 100, 20));
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setText("Agregar Editorial");
+        redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 86, 220, -1));
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        txtNombre_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtNombre_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtNombre_editorial.setBorder(null);
+        redondear1.add(txtNombre_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 110, 30));
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("País:");
-        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Email:");
-        redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 270, -1, -1));
+        redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Teléfono:");
-        redondear1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, -1, -1));
+        redondear1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 304, -1, 30));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Nombre:");
-        redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, -1));
+        redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Año:");
-        redondear1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+        redondear1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
         jLabel8.setText("ID:");
         redondear1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-        redondear1.add(txtPais_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 230, 100, 20));
-        redondear1.add(txtEmail_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 270, 100, 20));
-        redondear1.add(txtTelefono_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 100, 20));
-        redondear1.add(txtAño_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 360, 100, 20));
-        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 100, 20));
+
+        txtPais_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtPais_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtPais_editorial.setBorder(null);
+        redondear1.add(txtPais_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 110, 30));
+
+        txtEmail_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtEmail_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtEmail_editorial.setBorder(null);
+        redondear1.add(txtEmail_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 110, 30));
+
+        txtTelefono_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtTelefono_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtTelefono_editorial.setBorder(null);
+        redondear1.add(txtTelefono_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 110, 30));
+
+        txtAño_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtAño_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtAño_editorial.setBorder(null);
+        redondear1.add(txtAño_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 110, 30));
+
+        txtId_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtId_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtId_editorial.setBorder(null);
+        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 110, 30));
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 20));
+
+        jSeparator2.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 20));
+
+        jSeparator3.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 110, 20));
+
+        jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 20));
+
+        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 110, 20));
+
+        jSeparator6.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 250, 110, 20));
+
+        jSeparator7.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 290, 110, 20));
+
+        jSeparator8.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 110, 20));
+
+        jSeparator9.setBackground(new java.awt.Color(180, 205, 237));
+        jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
+        redondear1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 110, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -187,6 +261,15 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
+    private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JSeparator jSeparator5;
+    private javax.swing.JSeparator jSeparator6;
+    private javax.swing.JSeparator jSeparator7;
+    private javax.swing.JSeparator jSeparator8;
+    private javax.swing.JSeparator jSeparator9;
     private Modelo.Redondear redondear1;
     public javax.swing.JTable tblEditoriales;
     public javax.swing.JTextField txtAño_editorial;

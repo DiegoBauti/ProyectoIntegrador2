@@ -6,6 +6,7 @@ import javax.swing.table.DefaultTableModel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
+import javax.swing.JInternalFrame;
 import javax.swing.JTable;
 
 public class ControladorTrabajadores implements ActionListener{
@@ -17,6 +18,7 @@ public class ControladorTrabajadores implements ActionListener{
         vista.btnAgregar_Tra.addActionListener(this);
         vista.btnEliminar_Tra.addActionListener(this);
         vista.btnActualizar_Tra.addActionListener(this);
+        EliminarResaltado(vista);
         MostrarTabla(vista.tblTrabajadores);
     }
     public void MostrarTabla(JTable tabla) {
@@ -32,6 +34,12 @@ public class ControladorTrabajadores implements ActionListener{
 
     @Override
     public void actionPerformed(ActionEvent e) {
+    }
+    //Metodo que elimina el resaltado del Boton
+    void EliminarResaltado(JInternalFrame iframe) {
+        vista.btnActualizar_Tra.setFocusPainted(false);
+        vista.btnAgregar_Tra.setFocusPainted(false);
+        vista.btnEliminar_Tra.setFocusPainted(false);
     }
 }
     

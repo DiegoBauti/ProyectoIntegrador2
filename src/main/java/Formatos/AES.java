@@ -7,7 +7,7 @@ import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;
 import javax.swing.JOptionPane;
 
-public class encriptación {
+public class AES {
     String llave="proyectointegrador";   
     
     public SecretKeySpec crearClave(String llave){

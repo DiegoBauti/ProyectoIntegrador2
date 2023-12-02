@@ -7,11 +7,13 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import Formatos.FormatoRender;
 import Formatos.FormatoVenta;
+import java.awt.Color;
 import java.awt.Desktop;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.io.File;
 import javax.swing.JButton;
+import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.TableColumn;
 
@@ -27,10 +29,11 @@ public class ControladorHistorial_Venta implements ActionListener,MouseListener 
         vista.btnFiltrar.addActionListener(this);
         vista.btnOrdenar.addActionListener(this);
         vista.tblHistorial.addMouseListener(this);
-        
+        EliminarResaltado(vista);
         mh=new MysqlHistorialVentaDAO();
         FormatoHistorialVenta.EstiloTabla(vista.tblHistorial);
-        
+        btn.setBackground(new Color(180, 205, 237));
+        btn.setForeground(Color.BLACK);
         vista.tblHistorial.setRowHeight(40);
         TableColumn col=vista.tblHistorial.getColumn("Visualizar");
         col.setPreferredWidth(50);
@@ -147,5 +150,12 @@ public class ControladorHistorial_Venta implements ActionListener,MouseListener 
             }
         }
         return false;
+    }
+    //Metodo que elimina el resaltado del Boton
+    void EliminarResaltado(JInternalFrame iframe) {
+        vista.btnBuscar.setFocusPainted(false);
+        vista.btnFiltrar.setFocusPainted(false);
+        vista.btnMostrarTodo.setFocusPainted(false);
+        vista.btnOrdenar.setFocusPainted(false);
     }
 }

@@ -1,5 +1,6 @@
 package Controlador;
 
+import Modelo.Trabajadores;
 import Vista.*;
 import java.awt.Color;
 import java.awt.event.*;
@@ -8,8 +9,13 @@ import javax.swing.plaf.basic.BasicInternalFrameUI;
 
 public class ControladorHerramienta implements MouseListener{
     vistaHerramienta vista;
-    public ControladorHerramienta(vistaHerramienta view){
+    public ControladorHerramienta(vistaHerramienta view,Trabajadores tra){
         this.vista=view;
+        vista.lblApellidos.setText(tra.getApellido());
+        vista.lblNombres.setText(tra.getNombre());
+        vista.lblDNI.setText("DNI:"+String.valueOf(tra.getDni()));
+        //FALTARIA DARLE FORMATO DE IMAGEN
+        //vista.setIconImage(tra.getFotografia());
         vista.lblCerrar.addMouseListener(this);
         vista.lblMinimizar.addMouseListener(this);
         vista.btnVentas.addMouseListener(this);
@@ -17,6 +23,7 @@ public class ControladorHerramienta implements MouseListener{
         vista.btnInventario.addMouseListener(this);
         vista.btnEditoriales.addMouseListener(this);
         vista.btnTrabajadores.addMouseListener(this);
+        vista.btnCerrarSesion.addMouseListener(this);
         view.setLocationRelativeTo(null);
         EliminarResaltado(view);
         view.setVisible(true);
@@ -55,6 +62,14 @@ public class ControladorHerramienta implements MouseListener{
             ControladorEditoriales ce=new ControladorEditoriales(ve);
             MostrarInternal(ve);
         }
+        if (e.getSource()==vista.btnCerrarSesion) {
+            int resp=JOptionPane.showConfirmDialog(null, "¿Desea Cerrar Sesión?", "Cerrar Sesión", JOptionPane.OK_CANCEL_OPTION,JOptionPane.WARNING_MESSAGE);
+            if (resp==0) {
+                vistaBienvenida vb=new vistaBienvenida();
+                ControladorBienvenida cb=new ControladorBienvenida(vb);
+                vista.dispose();
+            }
+        }
     }
 
     @Override
@@ -73,6 +88,18 @@ public class ControladorHerramienta implements MouseListener{
         if (e.getSource()==vista.bntHistorial) {
             vista.bntHistorial.setBackground(new Color(178, 191, 138));
         }
+        if (e.getSource()==vista.btnEditoriales) {
+            vista.btnEditoriales.setBackground(new Color(178, 191, 138));
+        }
+        if (e.getSource()==vista.btnTrabajadores) {
+            vista.btnTrabajadores.setBackground(new Color(178, 191, 138));
+        }
+        if (e.getSource()==vista.btnInventario) {
+            vista.btnInventario.setBackground(new Color(178, 191, 138));
+        }
+        if (e.getSource()==vista.btnCerrarSesion) {
+            vista.btnCerrarSesion.setBackground(new Color(127, 0, 31));
+        }
     }
 
     @Override
@@ -82,6 +109,18 @@ public class ControladorHerramienta implements MouseListener{
         }
         if (e.getSource() == vista.bntHistorial) {
             vista.bntHistorial.setBackground(new Color(191, 204, 148));
+        }
+        if (e.getSource() == vista.btnEditoriales) {
+            vista.btnEditoriales.setBackground(new Color(191, 204, 148));
+        }
+        if (e.getSource() == vista.btnTrabajadores) {
+            vista.btnTrabajadores.setBackground(new Color(191, 204, 148));
+        }
+        if (e.getSource() == vista.btnInventario) {
+            vista.btnInventario.setBackground(new Color(191, 204, 148));
+        }
+        if (e.getSource()==vista.btnCerrarSesion) {
+            vista.btnCerrarSesion.setBackground(new Color(204, 0, 51));
         }
     }
     //Metodo para mostrar los JInternal en los desktop
@@ -105,6 +144,9 @@ public class ControladorHerramienta implements MouseListener{
         vista.btnInventario.setFocusPainted(false);
         vista.bntHistorial.setFocusPainted(false);
         //vista.btnResumen.setFocusCycleRoot(false);
+    }
+    void darInfo(){
+        
     }
     
 }
