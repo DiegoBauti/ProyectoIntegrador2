@@ -40,17 +40,13 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         txtPais_editorial = new javax.swing.JTextField();
         txtEmail_editorial = new javax.swing.JTextField();
         txtTelefono_editorial = new javax.swing.JTextField();
         txtAño_editorial = new javax.swing.JTextField();
-        txtId_editorial = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
-        jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
@@ -157,11 +153,6 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jLabel7.setText("Año:");
         redondear1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel8.setText("ID:");
-        redondear1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, -1, -1));
-
         txtPais_editorial.setBackground(new java.awt.Color(180, 205, 237));
         txtPais_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
         txtPais_editorial.setBorder(null);
@@ -182,11 +173,6 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         txtAño_editorial.setBorder(null);
         redondear1.add(txtAño_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 110, 30));
 
-        txtId_editorial.setBackground(new java.awt.Color(180, 205, 237));
-        txtId_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
-        txtId_editorial.setBorder(null);
-        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 110, 30));
-
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 160, 20));
@@ -195,15 +181,8 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 20));
 
-        jSeparator3.setBackground(new java.awt.Color(180, 205, 237));
-        jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        redondear1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 110, 20));
-
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 210, 110, 20));
-
-        jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
-        redondear1.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 170, 110, 20));
 
         jSeparator6.setBackground(new java.awt.Color(180, 205, 237));
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
@@ -259,13 +238,10 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
     private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
@@ -274,7 +250,6 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
     public javax.swing.JTable tblEditoriales;
     public javax.swing.JTextField txtAño_editorial;
     public javax.swing.JTextField txtEmail_editorial;
-    public javax.swing.JTextField txtId_editorial;
     public javax.swing.JTextField txtNombre_editorial;
     public javax.swing.JTextField txtPais_editorial;
     public javax.swing.JTextField txtTelefono_editorial;

@@ -40,7 +40,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jLabel15 = new javax.swing.JLabel();
         txtApellidos_trabajadores = new javax.swing.JTextField();
@@ -49,14 +48,12 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         txtDni_trabajadores = new javax.swing.JTextField();
         txtUsername_trabajadores = new javax.swing.JTextField();
         txtSueldo_trabajadores = new javax.swing.JTextField();
-        txtId_trabajadores = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
         jSeparator4 = new javax.swing.JSeparator();
         jSeparator5 = new javax.swing.JSeparator();
         jSeparator6 = new javax.swing.JSeparator();
-        jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
 
@@ -163,11 +160,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         jLabel12.setText("DNI:");
         redondear1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, 30));
 
-        jLabel13.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel13.setText("ID:");
-        redondear1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, -1, -1));
-
         jLabel14.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(0, 0, 0));
         jLabel14.setText("Sueldo:");
@@ -214,12 +206,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         txtSueldo_trabajadores.setBorder(null);
         redondear1.add(txtSueldo_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 410, 110, 30));
 
-        txtId_trabajadores.setBackground(new java.awt.Color(180, 205, 237));
-        txtId_trabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
-        txtId_trabajadores.setForeground(new java.awt.Color(0, 0, 0));
-        txtId_trabajadores.setBorder(null);
-        redondear1.add(txtId_trabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 110, 30));
-
         jSeparator1.setBackground(new java.awt.Color(180, 205, 237));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 400, 110, 20));
@@ -243,10 +229,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
         jSeparator6.setBackground(new java.awt.Color(180, 205, 237));
         jSeparator6.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 110, 20));
-
-        jSeparator7.setBackground(new java.awt.Color(180, 205, 237));
-        jSeparator7.setForeground(new java.awt.Color(0, 0, 0));
-        redondear1.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 110, 20));
 
         jSeparator8.setBackground(new java.awt.Color(180, 205, 237));
         jSeparator8.setForeground(new java.awt.Color(0, 0, 0));
@@ -291,7 +273,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel2;
@@ -304,7 +285,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
     private javax.swing.JSeparator jSeparator6;
-    private javax.swing.JSeparator jSeparator7;
     private javax.swing.JSeparator jSeparator8;
     private javax.swing.JSeparator jSeparator9;
     private Modelo.Redondear redondear1;
@@ -312,7 +292,6 @@ public class vistaTrabajadores extends javax.swing.JInternalFrame {
     public javax.swing.JTextField txtApellidos_trabajadores;
     public javax.swing.JTextField txtDni_trabajadores;
     public javax.swing.JTextField txtEmail_trabajadores;
-    public javax.swing.JTextField txtId_trabajadores;
     public javax.swing.JTextField txtNombre_trabajadores;
     public javax.swing.JTextField txtSueldo_trabajadores;
     public javax.swing.JTextField txtTelefono_trabajadores;

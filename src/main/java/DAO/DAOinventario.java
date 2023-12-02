@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
+import javax.swing.table.DefaultTableModel;
 
 public class DAOinventario implements InterfazInventario {
 
@@ -21,7 +22,7 @@ public class DAOinventario implements InterfazInventario {
     @Override
     public List ListarComic() {
         ArrayList<Comic> listacmc = new ArrayList();
-        String consulta = "SELECT c.comic_id, e.nombre, c.titulo, c.ubicacion_estante, c.clasificacion, c.formato, c.num_pagina, c.ejemplares, c.costo FROM comics c INNER JOIN editoriales e ON c.editorial_id = e.editorial_id WHERE ind='V'";
+        String consulta = "SELECT c.comic_id, e.nombre, c.titulo, c.ubicacion_estante, c.clasificacion, c.formato, c.num_pagina, c.ejemplares, c.costo FROM comics c INNER JOIN editoriales e ON c.editorial_id = e.editorial_id WHERE c.ind='V'";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
@@ -85,19 +86,18 @@ public class DAOinventario implements InterfazInventario {
 
     @Override
     public boolean Crear(Comic cmc) {
-        String consulta = "INSERT INTO comics(comic_id, editorial_id, titulo, ubicacion_estante, clasificacion, formato, num_pagina, ejemplares, costo, ind) VALUES (?,?,?,?,?,?,?,?,?,'V')";
+        String consulta = "INSERT INTO comics(editorial_id, titulo, ubicacion_estante, clasificacion, formato, num_pagina, ejemplares, costo, ind) VALUES (?,?,?,?,?,?,?,?,'V')";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
-            pstt.setInt(1, cmc.getComic_id());
-            pstt.setInt(2, cmc.getEditorial_id());
-            pstt.setString(3, cmc.getTitulo());
-            pstt.setString(4, cmc.getUbicacion_estante());
-            pstt.setString(5, cmc.getClasificacion());
-            pstt.setString(6, cmc.getFormato());
-            pstt.setInt(7, cmc.getNum_pagina());
-            pstt.setInt(8, cmc.getEjemplares());
-            pstt.setDouble(9, cmc.getCosto());
+            pstt.setInt(1, cmc.getEditorial_id());
+            pstt.setString(2, cmc.getTitulo());
+            pstt.setString(3, cmc.getUbicacion_estante());
+            pstt.setString(4, cmc.getClasificacion());
+            pstt.setString(5, cmc.getFormato());
+            pstt.setInt(6, cmc.getNum_pagina());
+            pstt.setInt(7, cmc.getEjemplares());
+            pstt.setDouble(8, cmc.getCosto());
             pstt.executeUpdate();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "No se pudo agregar los datos al inventario. \n" + ex);
@@ -119,6 +119,49 @@ public class DAOinventario implements InterfazInventario {
             JOptionPane.showMessageDialog(null, "No se pudo eliminar los datos del cliente \n" + ex);
         }
         return false;
+    }
+    //Metodo para filtrar los comics
+    @Override
+    public void listaComicxNombre(String nombre,JTable tabla) {
+        Connection cn=null;
+        PreparedStatement pstm=null;
+        ResultSet rs=null;
+        DefaultTableModel modelo=(DefaultTableModel) tabla.getModel();
+        tabla.setModel(modelo);
+        modelo.setRowCount(0);
+        try{
+            cn=new ConectarBD().getConectar();
+            String consulta="SELECT c.comic_id, e.nombre, c.titulo, c.ubicacion_estante, c.clasificacion, c.formato, c.num_pagina, c.ejemplares, c.costo \n" +
+                            "FROM comics c \n" +
+                            "INNER JOIN editoriales e ON c.editorial_id = e.editorial_id \n" +
+                            "WHERE c.titulo LIKE ? AND ejemplares > 0 AND c.ind = 'V'; ";
+            pstm=cn.prepareStatement(consulta);
+            pstm.setString(1, nombre+"%");
+            rs=pstm.executeQuery();
+            while (rs.next()) {
+                Comic cm=new Comic();
+                cm.setComic_id(rs.getInt(1));
+                cm.setEditorial(rs.getString(2));
+                cm.setTitulo(rs.getString(3));
+                cm.setUbicacion_estante(rs.getString(4));
+                cm.setClasificacion(rs.getString(5));
+                cm.setFormato(rs.getString(6));
+                cm.setNum_pagina(rs.getInt(7));
+                cm.setEjemplares(rs.getInt(8));
+                cm.setCosto(rs.getDouble(9));
+                modelo.addRow(cm.ListaInventario());
+            }
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }finally{
+            try{
+                if(cn!=null)cn.close();
+                if(pstm!=null)pstm.close();
+                if(rs!=null)cn.close();
+            }catch(Exception e2){
+                e2.printStackTrace();
+            }
+        }
     }
 
 }

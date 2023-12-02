@@ -29,8 +29,6 @@ public class vistaInventario extends javax.swing.JInternalFrame {
 
         redondear1 = new Modelo.Redondear();
         jLabel1 = new javax.swing.JLabel();
-        btnCerr = new javax.swing.JLabel();
-        btnMin = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblInventario = new javax.swing.JTable();
         txtSer = new javax.swing.JTextField();
@@ -39,13 +37,12 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         spnNum = new javax.swing.JSpinner();
         cbxFor = new javax.swing.JComboBox<>();
         spnSto = new javax.swing.JSpinner();
-        jTextField3 = new javax.swing.JTextField();
+        btnBuscar = new javax.swing.JTextField();
         jComboBox4 = new javax.swing.JComboBox<>();
         txtUbi = new javax.swing.JTextField();
         btnAgregar = new javax.swing.JButton();
         btnActualizar = new javax.swing.JButton();
         btnEliminar = new javax.swing.JButton();
-        btnBuscar = new javax.swing.JButton();
         btnFiltrar = new javax.swing.JButton();
         txtPre = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
@@ -65,12 +62,6 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Control de Inventario");
         redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
-
-        btnCerr.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar.png"))); // NOI18N
-        redondear1.add(btnCerr, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 20, -1, -1));
-
-        btnMin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/minimizar.png"))); // NOI18N
-        redondear1.add(btnMin, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, -1, -1));
 
         tblInventario.setBackground(new java.awt.Color(240, 244, 239));
         tblInventario.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
@@ -116,10 +107,10 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         spnSto.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "STOCK", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Segoe UI", 1, 18))); // NOI18N
         redondear1.add(spnSto, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 120, 120, 60));
 
-        jTextField3.setBackground(new java.awt.Color(180, 205, 237));
-        jTextField3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        jTextField3.setBorder(null);
-        redondear1.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 140, 30));
+        btnBuscar.setBackground(new java.awt.Color(180, 205, 237));
+        btnBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        btnBuscar.setBorder(null);
+        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 270, 140, 30));
 
         jComboBox4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "SELECCIONAR" }));
@@ -148,13 +139,6 @@ public class vistaInventario extends javax.swing.JInternalFrame {
         btnEliminar.setText("Eliminar");
         redondear1.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 210, 120, 40));
 
-        btnBuscar.setBackground(new java.awt.Color(51, 51, 51));
-        btnBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
-        btnBuscar.setText("Buscar");
-        btnBuscar.setBorder(null);
-        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 270, 90, 30));
-
         btnFiltrar.setBackground(new java.awt.Color(51, 51, 51));
         btnFiltrar.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         btnFiltrar.setForeground(new java.awt.Color(255, 255, 255));
@@ -179,11 +163,9 @@ public class vistaInventario extends javax.swing.JInternalFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizar;
     public javax.swing.JButton btnAgregar;
-    public javax.swing.JButton btnBuscar;
-    public javax.swing.JLabel btnCerr;
+    public javax.swing.JTextField btnBuscar;
     public javax.swing.JButton btnEliminar;
     public javax.swing.JButton btnFiltrar;
-    public javax.swing.JLabel btnMin;
     public javax.swing.JComboBox<String> cbxEdit;
     public javax.swing.JComboBox<String> cbxFor;
     public javax.swing.JComboBox<String> cbxRes;
@@ -191,7 +173,6 @@ public class vistaInventario extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField3;
     private Modelo.Redondear redondear1;
     public javax.swing.JSpinner spnNum;
     public javax.swing.JSpinner spnSto;

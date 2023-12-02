@@ -9,8 +9,10 @@ import java.awt.event.ActionListener;
 import java.util.List;
 import javax.swing.JInternalFrame;
 import javax.swing.JTable;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-public class ControladorInventario implements ActionListener {
+public class ControladorInventario implements ActionListener,DocumentListener {
     vistaInventario vista;
     DefaultTableModel modelo;
     static DAOinventario daoinv =  new DAOinventario();
@@ -21,6 +23,7 @@ public class ControladorInventario implements ActionListener {
         vista.btnAgregar.addActionListener(this);
         vista.btnEliminar.addActionListener(this);
         vista.btnActualizar.addActionListener(this);
+        vista.btnBuscar.getDocument().addDocumentListener(this);
         EliminarResaltado(vista);
         MostrarTabla(vista.tblInventario);
     }
@@ -70,7 +73,7 @@ public class ControladorInventario implements ActionListener {
     public void MostrarTabla(JTable tabla) {
         DAOinventario daoinv =  new DAOinventario();
         List<Comic>  listcmc =  daoinv.ListarComic();
-        String titulos[]={"ID","EDITORIAL","SERIE","UBICACION","RESTRICCION","FORMATO","NUMERO","STOCK","PRECIO"};
+        String titulos[]={"ID","EDITORIAL","TITULO","UBICACION","RESTRICCION","FORMATO","NUMERO PAG","STOCK","PRECIO"};
         modelo = new DefaultTableModel(null,titulos);
         tabla.setModel(modelo);
         for(int i=0; i<listcmc.size();i++){
@@ -93,6 +96,7 @@ public class ControladorInventario implements ActionListener {
                 daoinv.Eliminar(idcmc);
                 LimpiarEntradas(vista);
                 MostrarTabla(vista.tblInventario);
+                vista.btnBuscar.setText("");
             }
         }
         if (e.getSource()==vista.btnActualizar) {
@@ -106,6 +110,25 @@ public class ControladorInventario implements ActionListener {
         vista.btnAgregar.setFocusPainted(false);
         vista.btnEliminar.setFocusPainted(false);
         vista.btnFiltrar.setFocusPainted(false);
-        vista.btnBuscar.setFocusPainted(false);
+    }
+
+    @Override
+    public void insertUpdate(DocumentEvent e) {
+        LeerInput();
+    }
+
+    @Override
+    public void removeUpdate(DocumentEvent e) {
+        LeerInput();
+    }
+
+    @Override
+    public void changedUpdate(DocumentEvent e) {
+    }
+    void LeerInput(){
+        String dato=vista.btnBuscar.getText();
+        DAOinventario daoinv =  new DAOinventario();
+        daoinv.listaComicxNombre(dato, vista.tblInventario);
+        
     }
 }
