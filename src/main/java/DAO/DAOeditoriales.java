@@ -113,11 +113,7 @@ public class DAOeditoriales implements EditorialesDAO {
             pstt.setInt(4, edi.getTelefono());
             pstt.setString(5, edi.getEmail());
             pstt.setInt(6, edi.getAño_fundacion());
-
-            int filasActualizadas = pstt.executeUpdate();
-            if (filasActualizadas > 0) {
-                return true;
-            }
+            pstt.executeUpdate();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "No se pudo actualizar los datos de la Editorial. \n" + ex);
         }

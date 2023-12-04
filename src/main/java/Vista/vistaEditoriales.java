@@ -31,7 +31,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblEditoriales = new javax.swing.JTable();
         btnEliminar_Edit = new javax.swing.JButton();
-        btnActualizar_Edit = new javax.swing.JButton();
+        btnEditar_Edit = new javax.swing.JButton();
         btnAgregar_Edit = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         txtNombre_editorial = new javax.swing.JTextField();
@@ -51,6 +51,8 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jSeparator7 = new javax.swing.JSeparator();
         jSeparator8 = new javax.swing.JSeparator();
         jSeparator9 = new javax.swing.JSeparator();
+        btnActualizar_Edit = new javax.swing.JButton();
+        txtId_editorial = new javax.swing.JTextField();
 
         setBorder(null);
         setClosable(true);
@@ -64,7 +66,6 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         redondear1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Editoriales");
         redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 10, -1, -1));
 
@@ -94,18 +95,18 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnEliminar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnEliminar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 480, 160, 50));
+        redondear1.add(btnEliminar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 480, 160, 50));
 
-        btnActualizar_Edit.setBackground(new java.awt.Color(51, 153, 255));
-        btnActualizar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
-        btnActualizar_Edit.setText("ACTUALIZAR");
-        btnActualizar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
-        btnActualizar_Edit.addActionListener(new java.awt.event.ActionListener() {
+        btnEditar_Edit.setBackground(new java.awt.Color(51, 153, 255));
+        btnEditar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnEditar_Edit.setText("EDITAR");
+        btnEditar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btnEditar_Edit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnActualizar_EditActionPerformed(evt);
+                btnEditar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 480, 160, 50));
+        redondear1.add(btnEditar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 160, 50));
 
         btnAgregar_Edit.setBackground(new java.awt.Color(51, 204, 0));
         btnAgregar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
@@ -116,10 +117,9 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnAgregar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnAgregar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 160, 50));
+        redondear1.add(btnAgregar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 480, 160, 50));
 
         jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Agregar Editorial");
         redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 86, 220, -1));
 
@@ -129,27 +129,22 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         redondear1.add(txtNombre_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 110, 30));
 
         jLabel3.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("País:");
         redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Email:");
         redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("Teléfono:");
         redondear1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 304, -1, 30));
 
         jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("Nombre:");
         redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("Año:");
         redondear1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
@@ -200,6 +195,24 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jSeparator9.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator9, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 370, 110, 20));
 
+        btnActualizar_Edit.setBackground(new java.awt.Color(255, 204, 0));
+        btnActualizar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnActualizar_Edit.setText("ACTUALIZAR");
+        btnActualizar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
+        btnActualizar_Edit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnActualizar_EditActionPerformed(evt);
+            }
+        });
+        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 160, 50));
+
+        txtId_editorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtId_editorialActionPerformed(evt);
+            }
+        });
+        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 100, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -218,18 +231,27 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEliminar_EditActionPerformed
 
-    private void btnActualizar_EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizar_EditActionPerformed
+    private void btnEditar_EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditar_EditActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnActualizar_EditActionPerformed
+    }//GEN-LAST:event_btnEditar_EditActionPerformed
 
     private void btnAgregar_EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregar_EditActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnAgregar_EditActionPerformed
 
+    private void btnActualizar_EditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizar_EditActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnActualizar_EditActionPerformed
+
+    private void txtId_editorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtId_editorialActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtId_editorialActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnActualizar_Edit;
     public javax.swing.JButton btnAgregar_Edit;
+    public javax.swing.JButton btnEditar_Edit;
     public javax.swing.JButton btnEliminar_Edit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -250,6 +272,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
     public javax.swing.JTable tblEditoriales;
     public javax.swing.JTextField txtAño_editorial;
     public javax.swing.JTextField txtEmail_editorial;
+    public javax.swing.JTextField txtId_editorial;
     public javax.swing.JTextField txtNombre_editorial;
     public javax.swing.JTextField txtPais_editorial;
     public javax.swing.JTextField txtTelefono_editorial;
