@@ -18,9 +18,10 @@ import javax.swing.SwingUtilities;
 public class ControladorVentas implements DocumentListener, ActionListener {
 
     MysqlVentasDAO mv;
-    vistaVenta vista;    
+    vistaVenta vista;
     DefaultTableModel modelo;
     int filaedition;
+
     public ControladorVentas(vistaVenta view) {
         this.vista = view;
         mv = new MysqlVentasDAO();
@@ -37,48 +38,69 @@ public class ControladorVentas implements DocumentListener, ActionListener {
         vista.txfNombreBuscar.getDocument().addDocumentListener(this);
         EliminarResaltado(vista);
     }
-    
+
     @Override
     public void insertUpdate(DocumentEvent e) {
         LeerInput();
     }
-    
+
     @Override
     public void removeUpdate(DocumentEvent e) {
         LeerInput();
     }
-    
+
     @Override
     public void changedUpdate(DocumentEvent e) {
     }
-    
+
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == vista.btnAgregar) {
             int numfila = vista.tblComic_venta.getSelectedRow();
             if (numfila != -1) {
                 AgregarVenta(numfila);
+            } else {
+                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
+
             }
         }
         if (e.getSource() == vista.btnEliminar) {
             int fila = vista.tblListaVender.getSelectedRow();
             if (fila != -1) {
-                modelo.removeRow(fila);
+               
+               int id= (int)modelo.getValueAt(fila, 0);
+               int num= (int)modelo.getValueAt(fila, 3);
+               modelo.removeRow(fila);
+                for (int fila1 = 0; fila1 < vista.tblComic_venta.getRowCount(); fila1++) {
+                    if ((int)vista.tblComic_venta.getValueAt(fila1,0)==id) {
+                        int numDato=(int)vista.tblComic_venta.getValueAt(fila1, 2)+num;
+                        vista.tblComic_venta.setValueAt((Object)numDato, fila1, 2);
+                    break;
+                    }
+                }
                 Cantidad();
                 Precio();
+            } else {
+                JOptionPane.showMessageDialog(null, "Debe seleccionar una fila");
+
             }
             if (modelo.getRowCount() <= 0) {
                 reiniciar();
                 FormatoVenta.formatoInicial(vista);
             }
+
         }
         if (e.getSource() == vista.btnVaciar) {
-            modelo.setRowCount(0);
-            reiniciar();
-            FormatoVenta.formatoInicial(vista);
+            int resultado1 = JOptionPane.showConfirmDialog(null, "¿Desea vaciar la lista", "Proceso de Boleta", JOptionPane.YES_NO_OPTION, JOptionPane.WARNING_MESSAGE);
+            if (resultado1 == 0) {
+                 modelo.setRowCount(0);
+                reiniciar();
+                FormatoVenta.formatoInicial(vista);
+            } 
         }
         if (e.getSource() == vista.btnEditar) {
-             filaedition = vista.tblListaVender.getSelectedRow();
+            filaedition = vista.tblListaVender.getSelectedRow();
+
             if (filaedition >= 0) {
                 FormatoVenta.formato2(vista);
                 Object cant = vista.tblListaVender.getValueAt(filaedition, 3);
@@ -98,17 +120,17 @@ public class ControladorVentas implements DocumentListener, ActionListener {
                 int fila1 = 0, id1 = 0;
                 //traemos la cantidad de ejemplares
                 int cantejem = mv.cantidadvent(id);
-                
+
                 for (int fil = 0; fil < vista.tblComic_venta.getRowCount(); fil++) {
                     id1 = (int) vista.tblComic_venta.getValueAt(fil, 0);
                     if (id == id1) {
-                        fila1 = fil;                        
+                        fila1 = fil;
                         break;
                     }
                 }
                 if (cantejem < nuevocant) {
                     JOptionPane.showMessageDialog(null, "Agregue una cantidad adecuada",
-                             "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
+                            "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
                 } else {
                     vista.tblListaVender.setValueAt((Object) nuevocant, filaedition, 3);
                     vista.tblComic_venta.setValueAt(cantejem - nuevocant, fila1, 2);
@@ -116,12 +138,13 @@ public class ControladorVentas implements DocumentListener, ActionListener {
                 }
             } else {
                 JOptionPane.showMessageDialog(null, "Agregue una cantidad adecuada",
-                         "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
+                        "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
                 //proceso para que muestre en pantalla la fila seleccionada 
                 SwingUtilities.invokeLater(() -> {
-                        vista.tblListaVender.setRowSelectionInterval(filaedition, filaedition);
-                    });            }
-            
+                    vista.tblListaVender.setRowSelectionInterval(filaedition, filaedition);
+                });
+            }
+
             FormatoVenta.LimpiarCampos(vista);
             Cantidad();
             Precio();
@@ -154,8 +177,9 @@ public class ControladorVentas implements DocumentListener, ActionListener {
         }
     }
 
-    /**METODOS**/
-    
+    /**
+     * METODOS*
+     */
     //Metodo para poder recuperar el texto del Texfield
     public void LeerInput() {
         String nombre = vista.txfNombreBuscar.getText();
@@ -178,8 +202,8 @@ public class ControladorVentas implements DocumentListener, ActionListener {
             Object nombre = vista.tblComic_venta.getValueAt(num, 1);
             int ejemplares = (int) vista.tblComic_venta.getValueAt(num, 2);
             Object precio = vista.tblComic_venta.getValueAt(num, 3);
-            boolean idnue=buscaridLista((int) ID);
-            if (cantidad <= ejemplares && idnue==false) {
+            boolean idnue = buscaridLista((int) ID);
+            if (cantidad <= ejemplares && idnue == false) {
                 Object agregar[] = {ID, nombre, precio, cantidad};
                 modelo.addRow(agregar);
                 vista.tblComic_venta.setValueAt(ejemplares - cantidad, num, 2);
@@ -189,14 +213,16 @@ public class ControladorVentas implements DocumentListener, ActionListener {
                 FormatoVenta.formato1(vista);
             } else {
                 JOptionPane.showMessageDialog(null, "Agregue una cantidad o el Comic "
-                                                + "ya esta en la lista",
-                         "Error al agregar producto", JOptionPane.WARNING_MESSAGE);                
+                        + "ya esta en la lista",
+                        "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
+                 vista.spnCantidad.setValue(0);
             }
         } else {
             JOptionPane.showMessageDialog(null, "Agregue una cantidad",
-                     "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
+                    "Error al agregar producto", JOptionPane.WARNING_MESSAGE);
+            vista.spnCantidad.setValue(0);
         }
-        
+
     }
 
     //Metodo que suma los comics en total
@@ -219,28 +245,29 @@ public class ControladorVentas implements DocumentListener, ActionListener {
             suma = suma + mult;
             BigDecimal bigDecimal = new BigDecimal(suma);
             BigDecimal roundedNumber = bigDecimal.setScale(2, RoundingMode.HALF_UP);
-            vista.lblCostoTotal.setText("Costo Total: S/" + roundedNumber);            
+            vista.lblCostoTotal.setText("Costo Total: S/" + roundedNumber);
         }
         return suma;
     }
 
     //Reiniciar cantidades
     public void reiniciar() {
-        vista.lblCostoTotal.setText("Costo Total: S/");        
+        vista.lblCostoTotal.setText("Costo Total: S/");
         vista.lblCantidad.setText("Cantidad de Comic: ");
         mv.listarComic(vista.tblComic_venta);
     }
-    
-    public boolean buscaridLista(int ido){
-        int id=0;
-        for (int fila = 0; fila< vista.tblListaVender.getRowCount(); fila++) {
-             id=(int)vista.tblListaVender.getValueAt(fila, 0);
-             if (ido==id) {
+
+    public boolean buscaridLista(int ido) {
+        int id = 0;
+        for (int fila = 0; fila < vista.tblListaVender.getRowCount(); fila++) {
+            id = (int) vista.tblListaVender.getValueAt(fila, 0);
+            if (ido == id) {
                 return true;
             }
         }
-        return false; 
-    } 
+        return false;
+    }
+
     //Metodo que elimina el resaltado del Boton
     void EliminarResaltado(JInternalFrame iframe) {
         vista.btnActualizar.setFocusPainted(false);
@@ -251,5 +278,5 @@ public class ControladorVentas implements DocumentListener, ActionListener {
         vista.btnVender.setFocusPainted(false);
         //vista.btnResumen.setFocusCycleRoot(false);
     }
-    
+
 }

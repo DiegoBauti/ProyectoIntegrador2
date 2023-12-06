@@ -1,29 +1,23 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package Vista;
 
 import java.awt.Color;
 
-/**
- *
- * @author Frank
- */
 public class vistaHerramienta extends javax.swing.JFrame {
 
-    /**
-     * Creates new form vistaHerramienta
-     */
     public vistaHerramienta() {
          setUndecorated(true);
         setBackground(new Color(0, 0, 0, 0));
         initComponents();
-        setLocationRelativeTo(null);
+        //setIconImage(getIconImage());
         
-
     }
-
+/*Icono del proyecyo
+    @Override
+    public Image getIconImage (){
+        String ruta = System.getProperty("user.dir");
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource(ruta+"/src/main/resources/img/mini.jpg"));
+        return retValue;}*/
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -35,13 +29,9 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
         redondear1 = new Modelo.Redondear();
         jdpEscritorio = new javax.swing.JDesktopPane();
+        jLabel7 = new javax.swing.JLabel();
         redondear2 = new Modelo.Redondear();
         jLabel1 = new javax.swing.JLabel();
-        btnVentas = new javax.swing.JButton();
-        btnInventario = new javax.swing.JButton();
-        bntHistorial = new javax.swing.JButton();
-        btnEditoriales = new javax.swing.JButton();
-        btnTrabajadores = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         redondear3 = new Modelo.Redondear();
         jLabel3 = new javax.swing.JLabel();
@@ -50,11 +40,24 @@ public class vistaHerramienta extends javax.swing.JFrame {
         lblApellidos = new javax.swing.JLabel();
         lblDNI = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        btnVentas = new javax.swing.JPanel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        btnInventario = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        btnTrabajadores = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        btnHistorial = new javax.swing.JPanel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        btnEditoriales = new javax.swing.JPanel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
         lblMinimizar = new javax.swing.JLabel();
         lblCerrar = new javax.swing.JLabel();
-        btnCerrarSesion = new Modelo.Redondear();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        btnCerrarSesion = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -71,90 +74,45 @@ public class vistaHerramienta extends javax.swing.JFrame {
         jdpEscritorio.setBackground(new java.awt.Color(240, 244, 239));
         jdpEscritorio.setRequestFocusEnabled(false);
 
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\logo.jpg")); // NOI18N
+        jLabel7.setText("jLabel7");
+
+        jdpEscritorio.setLayer(jLabel7, javax.swing.JLayeredPane.DEFAULT_LAYER);
+
         javax.swing.GroupLayout jdpEscritorioLayout = new javax.swing.GroupLayout(jdpEscritorio);
         jdpEscritorio.setLayout(jdpEscritorioLayout);
         jdpEscritorioLayout.setHorizontalGroup(
             jdpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 870, Short.MAX_VALUE)
+            .addGroup(jdpEscritorioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 858, Short.MAX_VALUE)
+                .addContainerGap())
         );
         jdpEscritorioLayout.setVerticalGroup(
             jdpEscritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 580, Short.MAX_VALUE)
+            .addGroup(jdpEscritorioLayout.createSequentialGroup()
+                .addComponent(jLabel7)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         redondear1.add(jdpEscritorio, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, 870, 580));
 
-        redondear2.setBackground(new java.awt.Color(191, 204, 148));
+        redondear2.setBackground(new java.awt.Color(242, 60, 39));
         redondear2.setRoundBottomLeft(60);
         redondear2.setRoundTopLeft(60);
         redondear2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Nirmala UI", 0, 40)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(247, 210, 129));
         jLabel1.setText("Panel De");
-        redondear2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 170, 35));
+        redondear2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 170, 35));
 
-        btnVentas.setBackground(new java.awt.Color(191, 204, 148));
-        btnVentas.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnVentas.setForeground(new java.awt.Color(0, 0, 0));
-        btnVentas.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\carrito-de-compras (2).png")); // NOI18N
-        btnVentas.setText("      Ventas");
-        btnVentas.setBorder(null);
-        redondear2.add(btnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 270, 70));
-
-        btnInventario.setBackground(new java.awt.Color(191, 204, 148));
-        btnInventario.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnInventario.setForeground(new java.awt.Color(0, 0, 0));
-        btnInventario.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\alt-de-inventario.png")); // NOI18N
-        btnInventario.setText("  Inventario");
-        btnInventario.setBorder(null);
-        redondear2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 270, 70));
-
-        bntHistorial.setBackground(new java.awt.Color(191, 204, 148));
-        bntHistorial.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        bntHistorial.setForeground(new java.awt.Color(0, 0, 0));
-        bntHistorial.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\lista.png")); // NOI18N
-        bntHistorial.setText("    Historial");
-        bntHistorial.setBorder(null);
-        bntHistorial.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                bntHistorialActionPerformed(evt);
-            }
-        });
-        redondear2.add(bntHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 270, 70));
-
-        btnEditoriales.setBackground(new java.awt.Color(191, 204, 148));
-        btnEditoriales.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnEditoriales.setForeground(new java.awt.Color(0, 0, 0));
-        btnEditoriales.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\editar.png")); // NOI18N
-        btnEditoriales.setText("Editoriales");
-        btnEditoriales.setBorder(null);
-        btnEditoriales.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEditorialesActionPerformed(evt);
-            }
-        });
-        redondear2.add(btnEditoriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 270, 70));
-
-        btnTrabajadores.setBackground(new java.awt.Color(191, 204, 148));
-        btnTrabajadores.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
-        btnTrabajadores.setForeground(new java.awt.Color(0, 0, 0));
-        btnTrabajadores.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\usuarios (1).png")); // NOI18N
-        btnTrabajadores.setText("  Trabajadores");
-        btnTrabajadores.setBorder(null);
-        btnTrabajadores.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnTrabajadoresActionPerformed(evt);
-            }
-        });
-        redondear2.add(btnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 270, 70));
-
-        jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 40)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 1, 36)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(247, 210, 129));
         jLabel2.setText("Herramientas");
-        redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, 35));
+        redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 240, 35));
 
-        redondear3.setBackground(new java.awt.Color(143, 153, 111));
+        redondear3.setBackground(new java.awt.Color(247, 210, 129));
         redondear3.setRoundBottomLeft(60);
         redondear3.setRoundBottomRight(60);
         redondear3.setRoundTopLeft(60);
@@ -165,7 +123,7 @@ public class vistaHerramienta extends javax.swing.JFrame {
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("Bienvenido,");
         redondear3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 6, 90, 30));
-        redondear3.add(lblFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 20, 70, 60));
+        redondear3.add(lblFoto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 20, 70, 60));
 
         lblNombres.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         lblNombres.setForeground(new java.awt.Color(0, 0, 0));
@@ -186,9 +144,74 @@ public class vistaHerramienta extends javax.swing.JFrame {
         jLabel5.setText("jLabel5");
         redondear3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 37, -1));
 
-        redondear2.add(redondear3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 250, 110));
+        redondear2.add(redondear3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 510, 230, 110));
 
-        redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 270, 650));
+        btnVentas.setBackground(new java.awt.Color(242, 60, 39));
+        btnVentas.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel10.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(247, 210, 129));
+        jLabel10.setText("Ventas");
+        btnVentas.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 60, -1));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\ventas.png")); // NOI18N
+        btnVentas.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        redondear2.add(btnVentas, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 250, 70));
+
+        btnInventario.setBackground(new java.awt.Color(242, 60, 39));
+        btnInventario.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(247, 210, 129));
+        jLabel8.setText("Inventario");
+        btnInventario.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 90, -1));
+
+        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\libro-comico.png")); // NOI18N
+        btnInventario.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        redondear2.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 250, 70));
+
+        btnTrabajadores.setBackground(new java.awt.Color(242, 60, 39));
+        btnTrabajadores.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel12.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(247, 210, 129));
+        jLabel12.setText("Trabajadores");
+        btnTrabajadores.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 110, -1));
+
+        jLabel13.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\superheroe.png")); // NOI18N
+        btnTrabajadores.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        redondear2.add(btnTrabajadores, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 280, 250, 70));
+
+        btnHistorial.setBackground(new java.awt.Color(242, 60, 39));
+        btnHistorial.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel15.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\historial-medico.png")); // NOI18N
+        btnHistorial.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(247, 210, 129));
+        jLabel14.setText("Historial");
+        btnHistorial.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 110, -1));
+
+        redondear2.add(btnHistorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 250, 70));
+
+        btnEditoriales.setBackground(new java.awt.Color(242, 60, 39));
+        btnEditoriales.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel16.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(247, 210, 129));
+        jLabel16.setText("Editoriales");
+        btnEditoriales.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 110, -1));
+
+        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\libro-comico_1.png")); // NOI18N
+        btnEditoriales.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, -1, -1));
+
+        redondear2.add(btnEditoriales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 420, 250, 70));
+
+        redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 250, 650));
 
         lblMinimizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/minimizar.png"))); // NOI18N
         redondear1.add(lblMinimizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1070, 20, 37, -1));
@@ -196,23 +219,8 @@ public class vistaHerramienta extends javax.swing.JFrame {
         lblCerrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/cerrar.png"))); // NOI18N
         redondear1.add(lblCerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(1120, 20, 37, -1));
 
-        btnCerrarSesion.setBackground(new java.awt.Color(224, 79, 95));
-        btnCerrarSesion.setForeground(new java.awt.Color(255, 255, 255));
-        btnCerrarSesion.setRoundBottomLeft(60);
-        btnCerrarSesion.setRoundBottomRight(60);
-        btnCerrarSesion.setRoundTopLeft(60);
-        btnCerrarSesion.setRoundTopRight(60);
-        btnCerrarSesion.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel4.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("Cerrar Sesión");
-        btnCerrarSesion.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, -1, 30));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\energia (2).png")); // NOI18N
-        btnCerrarSesion.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 0, -1, 50));
-
-        redondear1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 10, 140, 50));
+        btnCerrarSesion.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\fuerza.png")); // NOI18N
+        redondear1.add(btnCerrarSesion, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 10, 30, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -229,18 +237,6 @@ public class vistaHerramienta extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void bntHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_bntHistorialActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_bntHistorialActionPerformed
-
-    private void btnEditorialesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditorialesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnEditorialesActionPerformed
-
-    private void btnTrabajadoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTrabajadoresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnTrabajadoresActionPerformed
 
     /**
      * @param args the command line arguments
@@ -279,18 +275,27 @@ public class vistaHerramienta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton bntHistorial;
-    public Modelo.Redondear btnCerrarSesion;
-    public javax.swing.JButton btnEditoriales;
-    public javax.swing.JButton btnInventario;
-    public javax.swing.JButton btnTrabajadores;
-    public javax.swing.JButton btnVentas;
+    public javax.swing.JLabel btnCerrarSesion;
+    public javax.swing.JPanel btnEditoriales;
+    public javax.swing.JPanel btnHistorial;
+    public javax.swing.JPanel btnInventario;
+    public javax.swing.JPanel btnTrabajadores;
+    public javax.swing.JPanel btnVentas;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     public javax.swing.JDesktopPane jdpEscritorio;
     public javax.swing.JLabel lblApellidos;
     public javax.swing.JLabel lblCerrar;

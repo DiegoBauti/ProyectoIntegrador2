@@ -30,7 +30,7 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(796, 580));
 
-        redondear1.setBackground(new java.awt.Color(180, 205, 237));
+        redondear1.setBackground(new java.awt.Color(27, 114, 159));
         redondear1.setRoundBottomLeft(60);
         redondear1.setRoundBottomRight(60);
         redondear1.setRoundTopLeft(60);
@@ -65,9 +65,10 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         cbxOrdenar.setBorder(null);
         redondear1.add(cbxOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 320, 210, 50));
 
-        btnFiltrar.setBackground(new java.awt.Color(51, 51, 51));
+        btnFiltrar.setBackground(new java.awt.Color(0, 153, 255));
         btnFiltrar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         btnFiltrar.setForeground(new java.awt.Color(255, 255, 255));
+        btnFiltrar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\filtrar.png")); // NOI18N
         btnFiltrar.setText("Filtrar");
         redondear1.add(btnFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 230, 100, 40));
 
@@ -77,20 +78,23 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         cbxFiltrar.setBorder(null);
         redondear1.add(cbxFiltrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 220, 130, 50));
 
-        btnOrdenar.setBackground(new java.awt.Color(51, 51, 51));
+        btnOrdenar.setBackground(new java.awt.Color(0, 204, 102));
         btnOrdenar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         btnOrdenar.setForeground(new java.awt.Color(255, 255, 255));
+        btnOrdenar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\planificacion.png")); // NOI18N
         btnOrdenar.setText("Ordenar");
         redondear1.add(btnOrdenar, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 380, 120, 40));
 
-        btnMostrarTodo.setBackground(new java.awt.Color(153, 153, 0));
+        btnMostrarTodo.setBackground(new java.awt.Color(204, 204, 0));
         btnMostrarTodo.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         btnMostrarTodo.setForeground(new java.awt.Color(255, 255, 255));
+        btnMostrarTodo.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\view.png")); // NOI18N
         btnMostrarTodo.setText("Mostrar Todo");
         redondear1.add(btnMostrarTodo, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 450, 40));
 
-        txfIngresoID.setBackground(new java.awt.Color(180, 205, 237));
+        txfIngresoID.setBackground(new java.awt.Color(27, 114, 159));
         txfIngresoID.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        txfIngresoID.setForeground(new java.awt.Color(255, 255, 255));
         txfIngresoID.setBorder(null);
         redondear1.add(txfIngresoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 130, 80, 30));
 
@@ -103,11 +107,12 @@ public class vistaHistorial_Venta extends javax.swing.JInternalFrame {
         jLabel2.setText("Selecciona una opción");
         redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 290, -1, -1));
 
-        btnBuscar.setBackground(new java.awt.Color(51, 51, 51));
+        btnBuscar.setBackground(new java.awt.Color(255, 153, 0));
         btnBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         btnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        btnBuscar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\search-interface-symbol.png")); // NOI18N
         btnBuscar.setText("Buscar");
-        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 90, 40));
+        redondear1.add(btnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 130, 110, 40));
 
         jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));

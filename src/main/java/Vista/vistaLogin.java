@@ -39,7 +39,7 @@ public class vistaLogin extends javax.swing.JFrame {
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        redondear1.setBackground(new java.awt.Color(52, 73, 102));
+        redondear1.setBackground(new java.awt.Color(26, 50, 62));
         redondear1.setRoundBottomLeft(60);
         redondear1.setRoundBottomRight(60);
         redondear1.setRoundTopLeft(60);
@@ -66,14 +66,14 @@ public class vistaLogin extends javax.swing.JFrame {
         jLabel5.setText("Contraseña:");
         redondear1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 420, -1, -1));
 
-        txtUser.setBackground(new java.awt.Color(52, 73, 102));
-        txtUser.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        txtUser.setBackground(new java.awt.Color(26, 50, 62));
+        txtUser.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         txtUser.setForeground(new java.awt.Color(255, 255, 255));
         txtUser.setBorder(null);
         redondear1.add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 350, 240, 40));
 
-        btnIngresar.setBackground(new java.awt.Color(81, 136, 162));
-        btnIngresar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        btnIngresar.setBackground(new java.awt.Color(27, 114, 159));
+        btnIngresar.setFont(new java.awt.Font("Nirmala UI", 0, 18)); // NOI18N
         btnIngresar.setForeground(new java.awt.Color(255, 255, 255));
         btnIngresar.setText("Ingresar");
         btnIngresar.setBorder(null);
@@ -82,7 +82,11 @@ public class vistaLogin extends javax.swing.JFrame {
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/OIP-removebg-preview.png"))); // NOI18N
         jLabel6.setText("jLabel6");
         redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 410, 380));
+
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 390, 240, -1));
+
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
         redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 490, 240, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/empleado (1).png"))); // NOI18N
@@ -111,11 +115,11 @@ public class vistaLogin extends javax.swing.JFrame {
         redondear1.add(btnCerr, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
         lblError.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
-        lblError.setForeground(new java.awt.Color(204, 0, 0));
+        lblError.setForeground(new java.awt.Color(255, 0, 0));
         redondear1.add(lblError, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 280, 280, 30));
 
-        txtPass.setBackground(new java.awt.Color(52, 73, 102));
-        txtPass.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        txtPass.setBackground(new java.awt.Color(26, 50, 62));
+        txtPass.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         txtPass.setForeground(new java.awt.Color(255, 255, 255));
         txtPass.setBorder(null);
         redondear1.add(txtPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 450, 240, 40));

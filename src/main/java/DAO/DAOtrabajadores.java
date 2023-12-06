@@ -19,7 +19,7 @@ public class DAOtrabajadores implements TrabajadoresDAO{
     @Override
     public List ListarTrabajadores() {
         ArrayList<Trabajadores> listatrab = new ArrayList();
-        String consulta = "select trabajador_id, nombre, apellido, telefono, email, dni, username, sueldo from trabajadores WHERE ind='V' ";
+        String consulta = "select trabajador_id, nombre, apellido, telefono, email, dni, username from trabajadores WHERE ind='V' ";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
@@ -33,7 +33,6 @@ public class DAOtrabajadores implements TrabajadoresDAO{
                 tra.setEmail(rst.getString("email"));
                 tra.setDni(rst.getInt("dni"));
                 tra.setUsername(rst.getString("username"));
-                tra.setSueldo(rst.getDouble("sueldo"));
                 listatrab.add(tra);
             }
         } catch(Exception ex) {
@@ -82,18 +81,16 @@ public class DAOtrabajadores implements TrabajadoresDAO{
 
     @Override
     public boolean CrearT(Trabajadores trab) {
-        String consulta = "INSERT INTO trabajadores(trabajador_id, nombre, apellido, telefono, email, dni, username, sueldo, ind) VALUES (?,?,?,?,?,?,?,?,'V')";
+        String consulta = "INSERT INTO trabajadores(nombre, apellido, telefono, email, dni, username, ind) VALUES (?,?,?,?,?,?,'V')";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
-            pstt.setInt(1, trab.getTrabajador_id());
-            pstt.setString(2, trab.getNombre());
-            pstt.setString(3, trab.getApellido());
-            pstt.setString(4, trab.getTelefono());
-            pstt.setString(5, trab.getEmail());
-            pstt.setInt(6, trab.getDni());
-            pstt.setString(7, trab.getUsername());
-            pstt.setDouble(8, trab.getSueldo());
+            pstt.setString(1, trab.getNombre());
+            pstt.setString(2, trab.getApellido());
+            pstt.setString(3, trab.getTelefono());
+            pstt.setString(4, trab.getEmail());
+            pstt.setInt(5, trab.getDni());
+            pstt.setString(6, trab.getUsername());
             pstt.executeUpdate();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "No se pudo agregar los datos del nuevo trabajador. \n" + ex);
@@ -103,7 +100,22 @@ public class DAOtrabajadores implements TrabajadoresDAO{
 
     @Override
     public boolean ActualizarT(Trabajadores trab) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+ String consulta = "UPDATE trabajadores SET dni=?, nombre=?, apellido=?, email=?, telefono=?, username=? WHERE trabajador_id=?;";
+        try {
+            cnt = conexion.getConnection();
+            pstt = cnt.prepareStatement(consulta);
+            pstt.setInt(1, trab.getDni());
+            pstt.setString(2, trab.getNombre());
+            pstt.setString(3, trab.getApellido());
+            pstt.setString(4, trab.getEmail());
+            pstt.setString(5, trab.getTelefono());
+            pstt.setString(6, trab.getUsername());
+            pstt.setInt(7, trab.getTrabajador_id());
+            pstt.executeUpdate();
+        } catch (Exception ex) {
+            JOptionPane.showMessageDialog(null, "No se pudo actualizar los datos del Trabajador. \n" + ex);
+        }
+        return false;
     }
 
     @Override

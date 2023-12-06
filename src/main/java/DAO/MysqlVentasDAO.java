@@ -21,7 +21,7 @@ public class MysqlVentasDAO implements VentasDAO {
             cn=new ConectarBD().getConectar();
             st=cn.createStatement();
             String consulta="SELECT comic_id,titulo,ejemplares,costo,ubicacion_estante FROM comiccrown.comics "
-                            + "where ejemplares>0";
+                            + "where ejemplares>0 and ind='V';";
             rs=st.executeQuery(consulta);
             while (rs.next()) {
                 Comic cm=new Comic();
@@ -56,7 +56,7 @@ public class MysqlVentasDAO implements VentasDAO {
         try{
             cn=new ConectarBD().getConectar();
             String consulta="select comic_id,titulo,ejemplares,costo,ubicacion_estante from comics WHERE  titulo like ? "
-                            + "and  ejemplares>0";
+                            + "and  ejemplares>0 and ind='V';";
             pstm=cn.prepareStatement(consulta);
             pstm.setString(1, nombre+"%");
             rs=pstm.executeQuery();
@@ -199,5 +199,4 @@ public class MysqlVentasDAO implements VentasDAO {
             }
         }
     }
-
 }

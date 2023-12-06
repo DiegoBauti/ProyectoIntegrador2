@@ -30,7 +30,6 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblComic_venta = new javax.swing.JTable();
-        txfNombreBuscar = new javax.swing.JTextField();
         lblBuscar = new javax.swing.JLabel();
         redondear2 = new Modelo.Redondear();
         jLabel2 = new javax.swing.JLabel();
@@ -44,18 +43,20 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         btnEditar = new javax.swing.JButton();
         spnCantidad2 = new javax.swing.JSpinner();
         btnActualizar = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        redondear3 = new Modelo.Redondear();
+        jLabel4 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        txfNombreBuscar = new javax.swing.JTextField();
         spnCantidad = new javax.swing.JSpinner();
         jLabel3 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jSeparator2 = new javax.swing.JSeparator();
         btnAgregar = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(870, 580));
 
-        redondear1.setBackground(new java.awt.Color(180, 205, 237));
+        redondear1.setBackground(new java.awt.Color(27, 114, 159));
         redondear1.setRoundBottomLeft(60);
         redondear1.setRoundBottomRight(60);
         redondear1.setRoundTopLeft(60);
@@ -66,7 +67,7 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         jLabel1.setFont(new java.awt.Font("Nirmala UI", 1, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
         jLabel1.setText("Ventas");
-        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 0, -1, -1));
+        redondear1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 10, -1, -1));
 
         tblComic_venta.setBackground(new java.awt.Color(240, 244, 239));
         tblComic_venta.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
@@ -85,33 +86,29 @@ public class vistaVenta extends javax.swing.JInternalFrame {
         jScrollPane1.setViewportView(tblComic_venta);
 
         redondear1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 160, 370, 380));
-
-        txfNombreBuscar.setBackground(new java.awt.Color(180, 205, 237));
-        txfNombreBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
-        txfNombreBuscar.setBorder(null);
-        redondear1.add(txfNombreBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 140, 30));
         redondear1.add(lblBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, -1, -1));
 
+        redondear2.setBackground(new java.awt.Color(247, 210, 129));
         redondear2.setRoundBottomLeft(60);
         redondear2.setRoundBottomRight(60);
         redondear2.setRoundTopLeft(60);
         redondear2.setRoundTopRight(60);
         redondear2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 20)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Nirmala UI", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 0, 0));
         jLabel2.setText("Comics Seleccionados");
-        redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 10, -1, -1));
+        redondear2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, -1, -1));
 
-        lblCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         lblCantidad.setForeground(new java.awt.Color(0, 0, 0));
         lblCantidad.setText("Cantidad de Comic:");
-        redondear2.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 50, 240, -1));
+        redondear2.add(lblCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 240, -1));
 
-        lblCostoTotal.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        lblCostoTotal.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
         lblCostoTotal.setForeground(new java.awt.Color(0, 0, 0));
         lblCostoTotal.setText("Costo Total:");
-        redondear2.add(lblCostoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 250, 20));
+        redondear2.add(lblCostoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 250, 20));
 
         tblListaVender.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         tblListaVender.setModel(new javax.swing.table.DefaultTableModel(
@@ -126,64 +123,84 @@ public class vistaVenta extends javax.swing.JInternalFrame {
 
         redondear2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 330, 340));
 
-        btnEliminar.setBackground(new java.awt.Color(51, 51, 51));
+        btnEliminar.setBackground(new java.awt.Color(255, 0, 51));
         btnEliminar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEliminar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/minus-sign.png"))); // NOI18N
         btnEliminar.setText("Eliminar");
         redondear2.add(btnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 100, 30));
 
-        btnVaciar.setBackground(new java.awt.Color(51, 51, 51));
+        btnVaciar.setBackground(new java.awt.Color(204, 0, 204));
         btnVaciar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnVaciar.setForeground(new java.awt.Color(255, 255, 255));
+        btnVaciar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\bin.png")); // NOI18N
         btnVaciar.setText("Vaciar");
         redondear2.add(btnVaciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, 100, 30));
 
-        btnVender.setBackground(new java.awt.Color(51, 51, 51));
+        btnVender.setBackground(new java.awt.Color(0, 153, 0));
         btnVender.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnVender.setForeground(new java.awt.Color(255, 255, 255));
+        btnVender.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\tick.png")); // NOI18N
         btnVender.setText("Vender");
         redondear2.add(btnVender, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 160, 100, 30));
 
-        btnEditar.setBackground(new java.awt.Color(51, 51, 51));
+        btnEditar.setBackground(new java.awt.Color(51, 153, 255));
         btnEditar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnEditar.setForeground(new java.awt.Color(255, 255, 255));
+        btnEditar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\edit.png")); // NOI18N
         btnEditar.setText("Editar");
         redondear2.add(btnEditar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 290, 100, 30));
 
         spnCantidad2.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         redondear2.add(spnCantidad2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 330, 100, 40));
 
-        btnActualizar.setBackground(new java.awt.Color(51, 51, 51));
+        btnActualizar.setBackground(new java.awt.Color(255, 204, 0));
         btnActualizar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
         btnActualizar.setForeground(new java.awt.Color(255, 255, 255));
+        btnActualizar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\refresh.png")); // NOI18N
         btnActualizar.setText("Actualizar");
-        redondear2.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 380, 100, 30));
+        redondear2.add(btnActualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 380, -1, 30));
 
         redondear1.add(redondear2, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 80, 460, 480));
-
-        spnCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
-        redondear1.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 80, 140, 30));
-
-        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Ingrese una cantidad:");
-        redondear1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
         redondear1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, -1));
 
-        jSeparator2.setBackground(new java.awt.Color(180, 205, 237));
-        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        redondear1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 110, 140, 10));
-
-        btnAgregar.setBackground(new java.awt.Color(51, 51, 51));
-        btnAgregar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
-        btnAgregar.setForeground(new java.awt.Color(255, 255, 255));
-        btnAgregar.setText("Agregar");
-        redondear1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 110, 30));
+        redondear3.setBackground(new java.awt.Color(165, 168, 167));
+        redondear3.setRoundBottomLeft(40);
+        redondear3.setRoundBottomRight(40);
+        redondear3.setRoundTopLeft(40);
+        redondear3.setRoundTopRight(40);
+        redondear3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("Nombre del Comic:");
-        redondear1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, -1, -1));
+        redondear3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, 20));
+
+        jSeparator2.setBackground(new java.awt.Color(27, 114, 159));
+        jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
+        redondear3.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 120, 10));
+
+        txfNombreBuscar.setBackground(new java.awt.Color(165, 168, 167));
+        txfNombreBuscar.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        txfNombreBuscar.setBorder(null);
+        redondear3.add(txfNombreBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 120, 30));
+
+        spnCantidad.setFont(new java.awt.Font("Nirmala UI", 0, 16)); // NOI18N
+        redondear3.add(spnCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 30, 70, 30));
+
+        jLabel3.setFont(new java.awt.Font("Nirmala UI", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Cantidad:");
+        redondear3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, -1, 20));
+
+        btnAgregar.setBackground(new java.awt.Color(51, 204, 0));
+        btnAgregar.setFont(new java.awt.Font("Nirmala UI", 0, 12)); // NOI18N
+        btnAgregar.setForeground(new java.awt.Color(0, 0, 0));
+        btnAgregar.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\plus (1).png")); // NOI18N
+        btnAgregar.setText("Agregar");
+        redondear3.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 30, 100, 30));
+
+        redondear1.add(redondear3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 370, 70));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -220,6 +237,7 @@ public class vistaVenta extends javax.swing.JInternalFrame {
     public javax.swing.JLabel lblCostoTotal;
     private Modelo.Redondear redondear1;
     private Modelo.Redondear redondear2;
+    private Modelo.Redondear redondear3;
     public javax.swing.JSpinner spnCantidad;
     public javax.swing.JSpinner spnCantidad2;
     public javax.swing.JTable tblComic_venta;

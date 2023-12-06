@@ -53,12 +53,14 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jSeparator9 = new javax.swing.JSeparator();
         btnActualizar_Edit = new javax.swing.JButton();
         txtId_editorial = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setBorder(null);
         setClosable(true);
         setPreferredSize(new java.awt.Dimension(870, 580));
 
-        redondear1.setBackground(new java.awt.Color(180, 205, 237));
+        redondear1.setBackground(new java.awt.Color(27, 114, 159));
+        redondear1.setForeground(new java.awt.Color(184, 184, 184));
         redondear1.setRoundBottomLeft(60);
         redondear1.setRoundBottomRight(60);
         redondear1.setRoundTopLeft(60);
@@ -88,6 +90,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
 
         btnEliminar_Edit.setBackground(new java.awt.Color(255, 0, 51));
         btnEliminar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnEliminar_Edit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\minus-sign.png")); // NOI18N
         btnEliminar_Edit.setText("ELIMINAR ");
         btnEliminar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnEliminar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -99,6 +102,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
 
         btnEditar_Edit.setBackground(new java.awt.Color(51, 153, 255));
         btnEditar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnEditar_Edit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\edit.png")); // NOI18N
         btnEditar_Edit.setText("EDITAR");
         btnEditar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnEditar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -110,6 +114,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
 
         btnAgregar_Edit.setBackground(new java.awt.Color(51, 204, 0));
         btnAgregar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnAgregar_Edit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\plus (1).png")); // NOI18N
         btnAgregar_Edit.setText("AGREGAR");
         btnAgregar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnAgregar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -123,8 +128,9 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         jLabel2.setText("Agregar Editorial");
         redondear1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 86, 220, -1));
 
-        txtNombre_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtNombre_editorial.setBackground(new java.awt.Color(27, 114, 159));
         txtNombre_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtNombre_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtNombre_editorial.setBorder(null);
         redondear1.add(txtNombre_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 180, 110, 30));
 
@@ -141,30 +147,34 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
         redondear1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 304, -1, 30));
 
         jLabel6.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
-        jLabel6.setText("Nombre:");
-        redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        jLabel6.setText("ID:");
+        redondear1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
         jLabel7.setText("Año:");
         redondear1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, -1, -1));
 
-        txtPais_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtPais_editorial.setBackground(new java.awt.Color(27, 114, 159));
         txtPais_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtPais_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtPais_editorial.setBorder(null);
         redondear1.add(txtPais_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 220, 110, 30));
 
-        txtEmail_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtEmail_editorial.setBackground(new java.awt.Color(27, 114, 159));
         txtEmail_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtEmail_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtEmail_editorial.setBorder(null);
         redondear1.add(txtEmail_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 260, 110, 30));
 
-        txtTelefono_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtTelefono_editorial.setBackground(new java.awt.Color(27, 114, 159));
         txtTelefono_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtTelefono_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtTelefono_editorial.setBorder(null);
         redondear1.add(txtTelefono_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, 110, 30));
 
-        txtAño_editorial.setBackground(new java.awt.Color(180, 205, 237));
+        txtAño_editorial.setBackground(new java.awt.Color(27, 114, 159));
         txtAño_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtAño_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtAño_editorial.setBorder(null);
         redondear1.add(txtAño_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 340, 110, 30));
 
@@ -197,6 +207,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
 
         btnActualizar_Edit.setBackground(new java.awt.Color(255, 204, 0));
         btnActualizar_Edit.setFont(new java.awt.Font("Nirmala UI", 1, 24)); // NOI18N
+        btnActualizar_Edit.setIcon(new javax.swing.ImageIcon("C:\\Users\\Diego\\Documents\\GitHub\\ProyectoIntegrador2\\src\\main\\resources\\img\\refresh.png")); // NOI18N
         btnActualizar_Edit.setText("ACTUALIZAR");
         btnActualizar_Edit.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255), 2));
         btnActualizar_Edit.addActionListener(new java.awt.event.ActionListener() {
@@ -204,14 +215,21 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
                 btnActualizar_EditActionPerformed(evt);
             }
         });
-        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 160, 50));
+        redondear1.add(btnActualizar_Edit, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 480, 180, 50));
 
+        txtId_editorial.setBackground(new java.awt.Color(27, 114, 159));
+        txtId_editorial.setFont(new java.awt.Font("Nirmala UI", 0, 13)); // NOI18N
+        txtId_editorial.setForeground(new java.awt.Color(255, 255, 255));
         txtId_editorial.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtId_editorialActionPerformed(evt);
             }
         });
-        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 100, -1));
+        redondear1.add(txtId_editorial, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 140, 100, 30));
+
+        jLabel8.setFont(new java.awt.Font("Nirmala UI", 1, 17)); // NOI18N
+        jLabel8.setText("Nombre:");
+        redondear1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -260,6 +278,7 @@ public class vistaEditoriales extends javax.swing.JInternalFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;

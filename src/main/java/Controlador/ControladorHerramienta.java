@@ -19,13 +19,12 @@ public class ControladorHerramienta implements MouseListener{
         vista.lblCerrar.addMouseListener(this);
         vista.lblMinimizar.addMouseListener(this);
         vista.btnVentas.addMouseListener(this);
-        vista.bntHistorial.addMouseListener(this);
-        vista.btnInventario.addMouseListener(this);
         vista.btnEditoriales.addMouseListener(this);
+        vista.btnInventario.addMouseListener(this);
+        vista.btnHistorial.addMouseListener(this);
         vista.btnTrabajadores.addMouseListener(this);
         vista.btnCerrarSesion.addMouseListener(this);
         view.setLocationRelativeTo(null);
-        EliminarResaltado(view);
         view.setVisible(true);
     }
     @Override
@@ -37,27 +36,53 @@ public class ControladorHerramienta implements MouseListener{
             vista.setExtendedState(JFrame.ICONIFIED);
         }
         if (e.getSource()==vista.btnVentas) {
+            vista.btnVentas.setBackground(new Color(191, 47, 30));
+            vista.btnInventario.setBackground(new Color(242, 60, 39));
+            vista.btnEditoriales.setBackground(new Color(242, 60, 39));
+            vista.btnTrabajadores.setBackground(new Color(242, 60, 39));
+            vista.btnHistorial.setBackground(new Color(242, 60, 39));
+
             vistaVenta vv=new vistaVenta();
             ControladorVentas cv=new ControladorVentas(vv);
             MostrarInternal(vv);
         }
         if (e.getSource()==vista.btnInventario) {
+            vista.btnInventario.setBackground(new Color(191, 47, 30));
+            vista.btnVentas.setBackground(new Color(242, 60, 39));
+            vista.btnEditoriales.setBackground(new Color(242, 60, 39));
+            vista.btnTrabajadores.setBackground(new Color(242, 60, 39));
+            vista.btnHistorial.setBackground(new Color(242, 60, 39));
             vistaInventario vi=new vistaInventario();
             ControladorInventario cv=new ControladorInventario(vi);
             MostrarInternal(vi);
         }
-        if (e.getSource()==vista.bntHistorial) {
+        if (e.getSource()==vista.btnHistorial) {
+            vista.btnHistorial.setBackground(new Color(191, 47, 30));
+            vista.btnInventario.setBackground(new Color(242, 60, 39));
+            vista.btnVentas.setBackground(new Color(242, 60, 39));
+            vista.btnTrabajadores.setBackground(new Color(242, 60, 39));
+            vista.btnEditoriales.setBackground(new Color(242, 60, 39));
             vistaHistorial_Venta vh=new vistaHistorial_Venta();
             ControladorHistorial_Venta ch=new ControladorHistorial_Venta(vh);
             MostrarInternal(vh);
         }
         if (e.getSource()==vista.btnTrabajadores) {
+            vista.btnTrabajadores.setBackground(new Color(191, 47, 30));
+            vista.btnInventario.setBackground(new Color(242, 60, 39));
+            vista.btnVentas.setBackground(new Color(242, 60, 39));
+            vista.btnEditoriales.setBackground(new Color(242, 60, 39));
+            vista.btnHistorial.setBackground(new Color(242, 60, 39));
             vistaTrabajadores vt=new vistaTrabajadores();
             ControladorTrabajadores ct=new ControladorTrabajadores(vt);
             MostrarInternal(vt);
             
         }
         if (e.getSource()==vista.btnEditoriales) {
+            vista.btnEditoriales.setBackground(new Color(191, 47, 30));
+            vista.btnInventario.setBackground(new Color(242, 60, 3));
+            vista.btnVentas.setBackground(new Color(242, 60, 39));
+            vista.btnTrabajadores.setBackground(new Color(242, 60, 39));
+            vista.btnHistorial.setBackground(new Color(242, 60, 39));
             vistaEditoriales ve=new vistaEditoriales();
             ControladorEditoriales ce=new ControladorEditoriales(ve);
             MostrarInternal(ve);
@@ -82,46 +107,34 @@ public class ControladorHerramienta implements MouseListener{
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        if (e.getSource()==vista.btnVentas) {
-            vista.btnVentas.setBackground(new Color(178, 191, 138));
-        }
-        if (e.getSource()==vista.bntHistorial) {
-            vista.bntHistorial.setBackground(new Color(178, 191, 138));
-        }
-        if (e.getSource()==vista.btnEditoriales) {
-            vista.btnEditoriales.setBackground(new Color(178, 191, 138));
-        }
-        if (e.getSource()==vista.btnTrabajadores) {
-            vista.btnTrabajadores.setBackground(new Color(178, 191, 138));
-        }
-        if (e.getSource()==vista.btnInventario) {
-            vista.btnInventario.setBackground(new Color(178, 191, 138));
-        }
         if (e.getSource()==vista.btnCerrarSesion) {
-            vista.btnCerrarSesion.setBackground(new Color(127, 0, 31));
+            vista.btnCerrarSesion.setBackground(new Color(184, 0, 0));
         }
     }
 
     @Override
-    public void mouseExited(MouseEvent e) {
+    public void mouseExited(MouseEvent e) {/*
         if (e.getSource() == vista.btnVentas) {
-            vista.btnVentas.setBackground(new Color(191, 204, 148));
+            vista.btnVentas.setBackground(new Color(224, 0, 0));
         }
         if (e.getSource() == vista.bntHistorial) {
-            vista.bntHistorial.setBackground(new Color(191, 204, 148));
+            vista.bntHistorial.setBackground(new Color(224, 0, 0));
         }
         if (e.getSource() == vista.btnEditoriales) {
-            vista.btnEditoriales.setBackground(new Color(191, 204, 148));
+            vista.btnEditoriales.setBackground(new Color(224, 0, 0));
         }
         if (e.getSource() == vista.btnTrabajadores) {
-            vista.btnTrabajadores.setBackground(new Color(191, 204, 148));
+            vista.btnTrabajadores.setBackground(new Color(224, 0, 0));
         }
         if (e.getSource() == vista.btnInventario) {
-            vista.btnInventario.setBackground(new Color(191, 204, 148));
+            vista.btnInventario.setBackground(new Color(224, 0, 0));
         }
         if (e.getSource()==vista.btnCerrarSesion) {
-            vista.btnCerrarSesion.setBackground(new Color(204, 0, 51));
-        }
+            vista.btnCerrarSesion.setBackground(new Color(224, 0, 0));
+        }*/
+    }
+    void quitar(){
+        
     }
     //Metodo para mostrar los JInternal en los desktop
     void MostrarInternal(JInternalFrame iframe){
@@ -135,15 +148,6 @@ public class ControladorHerramienta implements MouseListener{
     void removerDecorado(JInternalFrame internalFrame) {
         BasicInternalFrameUI ui = (BasicInternalFrameUI) internalFrame.getUI();
         ui.setNorthPane(null);
-    }
-    //Metodo que elimina el resaltado del Boton
-    void EliminarResaltado(JFrame frame) {
-        vista.btnVentas.setFocusPainted(false);
-        vista.btnEditoriales.setFocusPainted(false);
-        vista.btnTrabajadores.setFocusPainted(false);
-        vista.btnInventario.setFocusPainted(false);
-        vista.bntHistorial.setFocusPainted(false);
-        //vista.btnResumen.setFocusCycleRoot(false);
     }
     void darInfo(){
         

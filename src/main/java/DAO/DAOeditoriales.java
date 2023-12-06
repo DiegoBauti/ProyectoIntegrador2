@@ -83,16 +83,15 @@ public class DAOeditoriales implements EditorialesDAO {
 
     @Override
     public boolean Crear(Editoriales edi) {
-        String consulta = "insert into editoriales(editorial_id,nombre,pais,telefono,email,año_fundacion,ind) value(?,?,?,?,?,?,'V')";
+        String consulta = "insert into editoriales(nombre,pais,telefono,email,año_fundacion,ind) value(?,?,?,?,?,'V')";
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
-            pstt.setInt(1, edi.getEditorial_id());
-            pstt.setString(2, edi.getNombre());
-            pstt.setString(3, edi.getPais());
-            pstt.setInt(4, edi.getTelefono());
-            pstt.setString(5, edi.getEmail());
-            pstt.setInt(6, edi.getAño_fundacion());
+            pstt.setString(1, edi.getNombre());
+            pstt.setString(2, edi.getPais());
+            pstt.setInt(3, edi.getTelefono());
+            pstt.setString(4, edi.getEmail());
+            pstt.setInt(5, edi.getAño_fundacion());
             pstt.executeUpdate();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "No se pudo agregar los datos de la nueva Editorial. \n" + ex);
@@ -107,12 +106,13 @@ public class DAOeditoriales implements EditorialesDAO {
         try {
             cnt = conexion.getConnection();
             pstt = cnt.prepareStatement(consulta);
-            pstt.setInt(1, edi.getEditorial_id());
-            pstt.setString(2, edi.getNombre());
-            pstt.setString(3, edi.getPais());
-            pstt.setInt(4, edi.getTelefono());
-            pstt.setString(5, edi.getEmail());
-            pstt.setInt(6, edi.getAño_fundacion());
+            pstt.setString(1, edi.getNombre());
+            pstt.setString(2, edi.getPais());
+            pstt.setInt(3, edi.getTelefono());
+            pstt.setString(4, edi.getEmail());
+            pstt.setInt(5, edi.getAño_fundacion());
+            
+            pstt.setInt(6, edi.getEditorial_id());
             pstt.executeUpdate();
         } catch (Exception ex) {
             JOptionPane.showMessageDialog(null, "No se pudo actualizar los datos de la Editorial. \n" + ex);
